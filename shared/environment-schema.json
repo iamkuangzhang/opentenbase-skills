@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "OpenTenBase System Entry Environment Summary",
+  "type": "object",
+  "required": ["timestamp", "host", "opentenbase", "management", "processes", "ports", "database", "topology", "consistency", "safety", "errors"],
+  "properties": {
+    "timestamp": { "type": "string" },
+    "host": {
+      "type": "object",
+      "properties": {
+        "user": { "type": "string" },
+        "hostname": { "type": "string" },
+        "addresses": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "opentenbase": {
+      "type": "object",
+      "properties": {
+        "detected": { "type": "boolean" },
+        "version": { "type": "string" },
+        "binary_root": { "type": "string" },
+        "pg_config": { "type": "string" }
+      }
+    },
+    "management": {
+      "type": "object",
+      "properties": {
+        "selected": { "type": "string" },
+        "confidence": { "type": "string", "enum": ["high", "medium", "low", "unknown"] },
+        "candidates": { "type": "array" },
+        "evidence": { "type": "array" }
+      }
+    },
+    "processes": { "type": "array" },
+    "ports": { "type": "array" },
+    "database": {
+      "type": "object",
+      "properties": {
+        "reachable_cn": { "type": "array" },
+        "version": { "type": "string" }
+      }
+    },
+    "topology": {
+      "type": "object",
+      "properties": {
+        "gtm": { "type": "array" },
+        "coordinators": { "type": "array" },
+        "datanodes": { "type": "array" }
+      }
+    },
+    "consistency": {
+      "type": "object",
+      "properties": {
+        "status": { "type": "string" },
+        "warnings": { "type": "array" }
+      }
+    },
+    "safety": {
+      "type": "object",
+      "properties": {
+        "write_operations_allowed": { "type": "boolean" }
+      }
+    },
+    "errors": { "type": "array" }
+  }
+}

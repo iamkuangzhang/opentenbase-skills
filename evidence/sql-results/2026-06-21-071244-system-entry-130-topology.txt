@@ -1,0 +1,53 @@
+remote_command_exit=0
+reachable_cn:
+[
+  {
+    "host": "127.0.0.1",
+    "port": "30004",
+    "source": "/data/opentenbase/install/opentenbase_bin_v2.0/pgxc_ctl.conf"
+  }
+]
+topology:
+{
+  "gtm": [
+    {
+      "name": "gtm",
+      "type": "G",
+      "host": "otb130",
+      "port": "6666",
+      "source": "pgxc_node"
+    }
+  ],
+  "coordinators": [
+    {
+      "name": "cn001",
+      "type": "C",
+      "host": "otb130",
+      "port": "30004",
+      "source": "pgxc_node"
+    },
+    {
+      "name": "cn002",
+      "type": "C",
+      "host": "otb132",
+      "port": "30005",
+      "source": "pgxc_node"
+    }
+  ],
+  "datanodes": [
+    {
+      "name": "dn001",
+      "type": "D",
+      "host": "otb130",
+      "port": "20008",
+      "source": "pgxc_node"
+    },
+    {
+      "name": "dn002",
+      "type": "D",
+      "host": "otb132",
+      "port": "20009",
+      "source": "pgxc_node"
+    }
+  ]
+}

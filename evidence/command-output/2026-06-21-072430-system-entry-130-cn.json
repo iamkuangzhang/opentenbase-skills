@@ -1,0 +1,374 @@
+{
+  "timestamp": "2026-06-20T23:24:31.969005+00:00",
+  "host": {
+    "user": "opentenbase",
+    "id": "uid=1001(opentenbase) gid=1001(opentenbase) groups=1001(opentenbase)",
+    "hostname": "otb130",
+    "addresses": [
+      "192.168.244.130 192.168.244.131"
+    ],
+    "pwd": "/data/opentenbase",
+    "uname": "Linux otb130 3.10.0-1160.71.1.el7.x86_64 #1 SMP Tue Jun 28 15:37:28 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux"
+  },
+  "opentenbase": {
+    "detected": true,
+    "version": "PostgreSQL 11.0 @ OpenTenBase_v5.21.8.11 (commit: 760b03096) 2025-10-12 21:07:13 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 9.3.1 20200408 (Red Hat 9.3.1-2), 64-bit",
+    "binary_root": "/data/opentenbase/install/opentenbase_bin_v2.0/bin",
+    "psql": "/data/opentenbase/install/opentenbase_bin_v2.0/bin/psql",
+    "postgres": "/data/opentenbase/install/opentenbase_bin_v2.0/bin/postgres",
+    "pg_config": "/data/opentenbase/install/opentenbase_bin_v2.0/bin/pg_config",
+    "pg_config_version": "PostgreSQL 11.0 @ OpenTenBase_v5.21.8.11 (commit: 760b03096) 2025-10-12 21:07:13",
+    "postgres_version": "postgres (PostgreSQL) 11.0 @ OpenTenBase_v5.21.8.11 (commit: 760b03096) 2025-10-12 21:07:13"
+  },
+  "management": {
+    "selected": "ambiguous",
+    "confidence": "low",
+    "candidates": [
+      {
+        "name": "opentenbase_ctl",
+        "path": "/data/opentenbase/install/opentenbase_bin_v2.0/bin/opentenbase_ctl",
+        "type_a": "opentenbase_ctl is /data/opentenbase/install/opentenbase_bin_v2.0/bin/opentenbase_ctl\nopentenbase_ctl is /data/opentenbase/install/opentenbase_bin_v2.0/bin/opentenbase_ctl\nopentenbase_ctl is /data/opentenbase/install/opentenbase_bin_v2.0/bin/opentenbase_ctl\nopentenbase_ctl is /data/opentenbase/install/opentenbase_bin_v2.0/bin/opentenbase_ctl"
+      },
+      {
+        "name": "pgxc_ctl",
+        "path": "/data/opentenbase/install/opentenbase_bin_v2.0/bin/pgxc_ctl",
+        "type_a": "pgxc_ctl is /data/opentenbase/install/opentenbase_bin_v2.0/bin/pgxc_ctl\npgxc_ctl is /data/opentenbase/install/opentenbase_bin_v2.0/bin/pgxc_ctl\npgxc_ctl is /data/opentenbase/install/opentenbase_bin_v2.0/bin/pgxc_ctl\npgxc_ctl is /data/opentenbase/install/opentenbase_bin_v2.0/bin/pgxc_ctl"
+      },
+      {
+        "name": "psql",
+        "path": "/data/opentenbase/install/opentenbase_bin_v2.0/bin/psql",
+        "type_a": "psql is /data/opentenbase/install/opentenbase_bin_v2.0/bin/psql\npsql is /data/opentenbase/install/opentenbase_bin_v2.0/bin/psql\npsql is /data/opentenbase/install/opentenbase_bin_v2.0/bin/psql\npsql is /data/opentenbase/install/opentenbase_bin_v2.0/bin/psql\npsql is /bin/psql\npsql is /usr/bin/psql"
+      },
+      {
+        "name": "postgres",
+        "path": "/data/opentenbase/install/opentenbase_bin_v2.0/bin/postgres",
+        "type_a": "postgres is /data/opentenbase/install/opentenbase_bin_v2.0/bin/postgres\npostgres is /data/opentenbase/install/opentenbase_bin_v2.0/bin/postgres\npostgres is /data/opentenbase/install/opentenbase_bin_v2.0/bin/postgres\npostgres is /data/opentenbase/install/opentenbase_bin_v2.0/bin/postgres"
+      },
+      {
+        "name": "pg_config",
+        "path": "/data/opentenbase/install/opentenbase_bin_v2.0/bin/pg_config",
+        "type_a": "pg_config is /data/opentenbase/install/opentenbase_bin_v2.0/bin/pg_config\npg_config is /data/opentenbase/install/opentenbase_bin_v2.0/bin/pg_config\npg_config is /data/opentenbase/install/opentenbase_bin_v2.0/bin/pg_config\npg_config is /data/opentenbase/install/opentenbase_bin_v2.0/bin/pg_config\npg_config is /bin/pg_config\npg_config is /usr/bin/pg_config"
+      }
+    ],
+    "evidence": [
+      "opentenbase_ctl 二进制：/data/opentenbase/install/opentenbase_bin_v2.0/bin/opentenbase_ctl",
+      "pgxc_ctl 二进制：/data/opentenbase/install/opentenbase_bin_v2.0/bin/pgxc_ctl",
+      "psql 二进制：/data/opentenbase/install/opentenbase_bin_v2.0/bin/psql",
+      "postgres 二进制：/data/opentenbase/install/opentenbase_bin_v2.0/bin/postgres",
+      "pg_config 二进制：/data/opentenbase/install/opentenbase_bin_v2.0/bin/pg_config",
+      "opentenbase_ctl 风格配置候选：/data/opentenbase/OpenTenBase/contrib/opentenbase_ctl.new/config/config.ini",
+      "opentenbase_ctl 风格配置候选：/data/opentenbase/OpenTenBase/contrib/opentenbase_ctl/config/config.ini",
+      "pgxc_ctl 配置：/data/opentenbase/OpenTenBase/src/test/opentenbase_test/pgxc_ctl.conf",
+      "opentenbase_ctl 风格配置候选：/data/opentenbase/backup/opentenbase_ctl_20260619_054001/opentenbase_ctl.source/config/config.ini",
+      "pgxc_ctl 配置：/data/opentenbase/install/opentenbase_bin_v2.0/pgxc_ctl.conf",
+      "opentenbase_ctl 风格配置候选：/data/opentenbase/opentenbase_ctl_current/config.ini",
+      "pgxc_ctl 配置：/data/opentenbase/pgxc_ctl/pgxc_ctl.conf",
+      "OpenTenBase 相关进程行数：45"
+    ]
+  },
+  "config_files": [
+    {
+      "path": "/data/opentenbase/OpenTenBase/contrib/opentenbase_ctl.new/config/config.ini"
+    },
+    {
+      "path": "/data/opentenbase/OpenTenBase/contrib/opentenbase_ctl/config/config.ini"
+    },
+    {
+      "path": "/data/opentenbase/OpenTenBase/src/test/opentenbase_test/pgxc_ctl.conf"
+    },
+    {
+      "path": "/data/opentenbase/backup/opentenbase_ctl_20260619_054001/opentenbase_ctl.source/config/config.ini"
+    },
+    {
+      "path": "/data/opentenbase/install/opentenbase_bin_v2.0/pgxc_ctl.conf"
+    },
+    {
+      "path": "/data/opentenbase/opentenbase_ctl_current/config.ini"
+    },
+    {
+      "path": "/data/opentenbase/pgxc_ctl/pgxc_ctl.conf"
+    }
+  ],
+  "processes": [
+    {
+      "line": "root       2006   1991  0 Jun20 tty1     00:00:00 su - opentenbase"
+    },
+    {
+      "line": "root       2423   2397  0 Jun20 pts/0    00:00:00 su - opentenbase"
+    },
+    {
+      "line": "openten+  41273      1  0 Jun20 ?        00:01:39 gtm -D /data/opentenbase/run/instance/pluginctl_current/gtm0001/data"
+    },
+    {
+      "line": "openten+  41280      1  0 Jun20 ?        00:00:19 /data/opentenbase/install/opentenbase_bin_v2.0/bin/postgres --coordinator -D /data/opentenbase/run/instance/pluginctl_current/cn0001/data -i"
+    },
+    {
+      "line": "openten+  41281      1  0 Jun20 ?        00:00:16 /data/opentenbase/install/opentenbase_bin_v2.0/bin/postgres --datanode -D /data/opentenbase/run/instance/pluginctl_current/dn0001/data -i"
+    },
+    {
+      "line": "openten+  41336  41281  0 Jun20 ?        00:00:06 postgres: logger process   "
+    },
+    {
+      "line": "openten+  41338  41281  0 Jun20 ?        00:00:00 postgres: checkpointer process   "
+    },
+    {
+      "line": "openten+  41339  41281  0 Jun20 ?        00:00:02 postgres: writer process   "
+    },
+    {
+      "line": "openten+  41340  41281  0 Jun20 ?        00:00:00 postgres: invalidate buffer process   "
+    },
+    {
+      "line": "openten+  41341  41281  0 Jun20 ?        00:00:09 postgres: wal writer process   "
+    },
+    {
+      "line": "openten+  41342  41281  0 Jun20 ?        00:01:02 postgres: forward sender process   "
+    },
+    {
+      "line": "openten+  41343  41281  0 Jun20 ?        00:00:02 postgres: autovacuum launcher process   "
+    },
+    {
+      "line": "openten+  41344  41281  0 Jun20 ?        00:00:01 postgres: stats collector process   "
+    },
+    {
+      "line": "openten+  41345  41281  0 Jun20 ?        00:00:00 postgres: pooler process   "
+    },
+    {
+      "line": "openten+  41346  41281  0 Jun20 ?        00:00:03 postgres: forward recver process   "
+    },
+    {
+      "line": "openten+  41349  41281  0 Jun20 ?        00:00:00 postgres: logical replication launcher   "
+    },
+    {
+      "line": "openten+  41355  41280  0 Jun20 ?        00:00:00 postgres: checkpointer process   "
+    },
+    {
+      "line": "openten+  41356  41280  0 Jun20 ?        00:00:02 postgres: writer process   "
+    },
+    {
+      "line": "openten+  41357  41280  0 Jun20 ?        00:00:00 postgres: invalidate buffer process   "
+    },
+    {
+      "line": "openten+  41358  41280  0 Jun20 ?        00:00:09 postgres: wal writer process   "
+    },
+    {
+      "line": "openten+  41359  41280  0 Jun20 ?        00:01:02 postgres: forward sender process   "
+    },
+    {
+      "line": "openten+  41360  41280  0 Jun20 ?        00:00:02 postgres: autovacuum launcher process   "
+    },
+    {
+      "line": "openten+  41361  41280  0 Jun20 ?        00:00:03 postgres: 2pc clean launcher   "
+    },
+    {
+      "line": "openten+  41362  41280  0 Jun20 ?        00:00:01 postgres: stats collector process   "
+    },
+    {
+      "line": "openten+  41363  41280  0 Jun20 ?        00:00:00 postgres: pooler process   "
+    },
+    {
+      "line": "openten+  41364  41280  0 Jun20 ?        00:00:52 postgres: forward recver process   "
+    },
+    {
+      "line": "openten+  41366  41280  0 Jun20 ?        00:00:00 postgres: global deadlock detector   "
+    },
+    {
+      "line": "openten+  41371  41280  0 Jun20 ?        00:00:00 postgres: logical replication launcher   "
+    },
+    {
+      "line": "openten+  41715  41281  0 Jun20 ?        00:00:00 postgres: opentenbase postgres 192.168.244.130(55384) idle"
+    },
+    {
+      "line": "openten+  41716  41281  0 Jun20 ?        00:00:00 postgres: opentenbase postgres 192.168.244.130(55386) idle"
+    },
+    {
+      "line": "openten+  41717  41281  0 Jun20 ?        00:00:00 postgres: opentenbase postgres 192.168.244.130(55388) idle"
+    },
+    {
+      "line": "openten+  41718  41281  0 Jun20 ?        00:00:00 postgres: opentenbase postgres 192.168.244.130(55390) idle"
+    },
+    {
+      "line": "openten+  41724  41280  0 Jun20 ?        00:00:00 postgres: opentenbase postgres 192.168.244.132(56254) idle"
+    },
+    {
+      "line": "openten+  41726  41280  0 Jun20 ?        00:00:00 postgres: opentenbase postgres 192.168.244.132(56258) idle"
+    },
+    {
+      "line": "openten+  41728  41280  0 Jun20 ?        00:00:00 postgres: opentenbase postgres 192.168.244.132(56268) idle"
+    },
+    {
+      "line": "openten+  41730  41280  0 Jun20 ?        00:00:00 postgres: opentenbase postgres 192.168.244.132(56274) idle"
+    },
+    {
+      "line": "openten+  41736  41281  0 Jun20 ?        00:00:00 postgres: opentenbase postgres 192.168.244.132(44478) idle"
+    },
+    {
+      "line": "openten+  41737  41281  0 Jun20 ?        00:00:00 postgres: opentenbase postgres 192.168.244.132(44480) idle"
+    },
+    {
+      "line": "openten+  41740  41281  0 Jun20 ?        00:00:00 postgres: opentenbase postgres 192.168.244.132(44482) idle"
+    },
+    {
+      "line": "openten+  41742  41281  0 Jun20 ?        00:00:00 postgres: opentenbase postgres 192.168.244.132(44484) idle"
+    },
+    {
+      "line": "openten+  45593  41281  0 03:38 ?        00:00:00 postgres: opentenbase postgres 192.168.244.130(47190) idle"
+    },
+    {
+      "line": "openten+  45729  41280  0 Jun20 ?        00:00:00 postgres: opentenbase postgres 192.168.244.132(56328) idle"
+    },
+    {
+      "line": "openten+  45730  41281  0 Jun20 ?        00:00:00 postgres: opentenbase postgres 192.168.244.132(44526) idle"
+    },
+    {
+      "line": "root     128210 128208  0 07:24 ?        00:00:00 su - opentenbase -c /opt/python3.11/bin/python3.11 - --json --config-search-root /data/opentenbase --extra-config-search-root /opt --extra-config-search-root /home/opentenbase"
+    },
+    {
+      "line": "openten+ 128215 128210  0 07:24 ?        00:00:00 /opt/python3.11/bin/python3.11 - --json --config-search-root /data/opentenbase --extra-config-search-root /opt --extra-config-search-root /home/opentenbase"
+    }
+  ],
+  "ports": [
+    {
+      "line": "LISTEN     0      128          *:30004                    *:*                   users:((\"postgres\",pid=41280,fd=3))"
+    },
+    {
+      "line": "LISTEN     0      128          *:20028                    *:*                   users:((\"postgres\",pid=41346,fd=3))"
+    },
+    {
+      "line": "LISTEN     0      128          *:30024                    *:*                   users:((\"postgres\",pid=41364,fd=3))"
+    },
+    {
+      "line": "LISTEN     0      128          *:20008                    *:*                   users:((\"postgres\",pid=41281,fd=3))"
+    },
+    {
+      "line": "LISTEN     0      128          *:6666                     *:*                   users:((\"gtm\",pid=41273,fd=3))"
+    },
+    {
+      "line": "LISTEN     0      128       [::]:30004                 [::]:*                   users:((\"postgres\",pid=41280,fd=4))"
+    },
+    {
+      "line": "LISTEN     0      128       [::]:20028                 [::]:*                   users:((\"postgres\",pid=41346,fd=4))"
+    },
+    {
+      "line": "LISTEN     0      128       [::]:30024                 [::]:*                   users:((\"postgres\",pid=41364,fd=4))"
+    },
+    {
+      "line": "LISTEN     0      128       [::]:20008                 [::]:*                   users:((\"postgres\",pid=41281,fd=4))"
+    },
+    {
+      "line": "LISTEN     0      128       [::]:6666                  [::]:*                   users:((\"gtm\",pid=41273,fd=4))"
+    }
+  ],
+  "database": {
+    "reachable_cn": [
+      {
+        "host": "127.0.0.1",
+        "port": "30004",
+        "source": "/data/opentenbase/install/opentenbase_bin_v2.0/pgxc_ctl.conf"
+      }
+    ],
+    "version": "PostgreSQL 11.0 @ OpenTenBase_v5.21.8.11 (commit: 760b03096) 2025-10-12 21:07:13 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 9.3.1 20200408 (Red Hat 9.3.1-2), 64-bit"
+  },
+  "topology": {
+    "gtm": [
+      {
+        "name": "gtm",
+        "type": "G",
+        "host": "otb130",
+        "port": "6666",
+        "source": "pgxc_node"
+      }
+    ],
+    "coordinators": [
+      {
+        "name": "cn001",
+        "type": "C",
+        "host": "otb130",
+        "port": "30004",
+        "source": "pgxc_node"
+      },
+      {
+        "name": "cn002",
+        "type": "C",
+        "host": "otb132",
+        "port": "30005",
+        "source": "pgxc_node"
+      }
+    ],
+    "datanodes": [
+      {
+        "name": "dn001",
+        "type": "D",
+        "host": "otb130",
+        "port": "20008",
+        "source": "pgxc_node"
+      },
+      {
+        "name": "dn002",
+        "type": "D",
+        "host": "otb132",
+        "port": "20009",
+        "source": "pgxc_node"
+      }
+    ]
+  },
+  "consistency": {
+    "status": "ambiguous",
+    "warnings": [
+      "配置候选中的 CN 数量与 pgxc_node 查询结果不同"
+    ]
+  },
+  "safety": {
+    "write_operations_allowed": false,
+    "reason": "system-entry 按设计只读"
+  },
+  "command_evidence": [
+    {
+      "argv": [
+        "hostname",
+        "-I"
+      ],
+      "returncode": 0,
+      "stdout": "192.168.244.130 192.168.244.131",
+      "stderr": "",
+      "timeout": false
+    },
+    {
+      "argv": [
+        "whoami"
+      ],
+      "returncode": 0,
+      "stdout": "opentenbase",
+      "stderr": "",
+      "timeout": false
+    },
+    {
+      "argv": [
+        "id"
+      ],
+      "returncode": 0,
+      "stdout": "uid=1001(opentenbase) gid=1001(opentenbase) groups=1001(opentenbase)",
+      "stderr": "",
+      "timeout": false
+    },
+    {
+      "argv": [
+        "hostname"
+      ],
+      "returncode": 0,
+      "stdout": "otb130",
+      "stderr": "",
+      "timeout": false
+    },
+    {
+      "argv": [
+        "uname",
+        "-a"
+      ],
+      "returncode": 0,
+      "stdout": "Linux otb130 3.10.0-1160.71.1.el7.x86_64 #1 SMP Tue Jun 28 15:37:28 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux",
+      "stderr": "",
+      "timeout": false
+    }
+  ],
+  "errors": []
+}

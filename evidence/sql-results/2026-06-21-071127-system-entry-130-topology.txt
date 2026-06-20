@@ -1,0 +1,9 @@
+remote_command_exit=0
+reachable_cn:
+[]
+topology:
+{
+  "gtm": [],
+  "coordinators": [],
+  "datanodes": []
+}
