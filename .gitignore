@@ -8,3 +8,5 @@ venv/
 .env
 .DS_Store
 Thumbs.db
+dev/tdsql_pdf_paths.txt
+dev/tdsql_pdf_extracts/

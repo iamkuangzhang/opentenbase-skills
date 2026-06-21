@@ -1,6 +1,6 @@
 # 当前状态
 
-最后更新：2026-06-21 本轮结构调整后
+最后更新：2026-06-21 TDSQL 资料纠偏后
 
 ## 当前阶段目标
 
@@ -25,15 +25,20 @@
 - `VERIFIED`：已新增 `opentenbase-cluster-management` 技能。
 - `VERIFIED`：开发材料已迁移到 `dev/`，正式技能保留在 `skills/`。
 - `VERIFIED`：本轮只读测试执行了 `pgxc_ctl monitor all`，130 / 132 当前均显示 GTM、CN、DN Not running，证据为 `dev/evidence/command-output/2026-06-21-180007-cluster-readonly-130-132.json`。
+- `VERIFIED`：本轮未继续扩展 `system-entry` 探测逻辑，只对 `architecture` 和 `cluster-management` 做内容纠偏。
+- `VERIFIED`：本轮已读取用户提供的 3 份 TDSQL PostgreSQL PDF，并将相关内容仅作为 `TDSQL_CANDIDATE` 候选知识写入正式技能。
+- `VERIFIED`：`cluster-management` 已改为面向工具使用的操作手册，覆盖 `pgxc_ctl`、`opentenbase_ctl`、shell/交互命令区分、状态判断、启停验证和高风险边界。
+- `VERIFIED`：`architecture` 已补充 CN/DN/GTM、Share-Nothing、分布表、复制表、分布键、数据倾斜、Join 代价和分布式事务判断。
 
 ## 已记录但尚未全部验证
 
 - `DOCUMENTED`：该技能只允许执行只读环境识别。
-- `DOCUMENTED`：该技能必须保存证据，并使用 `VERIFIED`、`DOCUMENTED`、`UNVERIFIED` 标签。
+- `DOCUMENTED`：正式技能必须区分 `VERIFIED`、`DOCUMENTED`、`TDSQL_CANDIDATE`、`UNVERIFIED`。
+- `TDSQL_CANDIDATE`：TDSQL 资料中的 Shell、SQL、SCP、GUC、分片键、hash 分片、Join 重分布、两阶段提交等内容只能作为 OpenTenBase 学习候选，尚未标记为 OpenTenBase 实测事实。
 
 ## 当前工作状态
 
-`system-entry` 已冻结为正式技能；本轮新增架构知识和集群管理技能。
+`system-entry` 已冻结为正式技能；本轮聚焦 `architecture` 和 `cluster-management` 的内容纠偏，不新增技能。
 
 ## 已知问题
 
@@ -61,4 +66,4 @@
 
 ## 下一步唯一建议
 
-下一步建议补充 `basic-usage` 技能，覆盖连接数据库、基础 SQL、查看表和只读排查。
+下一步建议用 OpenTenBase 官方资料或当前集群只读 SQL 逐项验证 `TDSQL_CANDIDATE` 内容，再决定哪些可以提升为 `DOCUMENTED` 或 `VERIFIED`。
