@@ -1,0 +1,866 @@
+{
+  "timestamp": "2026-06-20T23:45:49.574969+00:00",
+  "host": {
+    "user": "opentenbase",
+    "id": "uid=1001(opentenbase) gid=1001(opentenbase) groups=1001(opentenbase)",
+    "hostname": "otb130",
+    "addresses": [
+      "192.168.244.130 192.168.244.131"
+    ],
+    "pwd": "/data/opentenbase",
+    "uname": "Linux otb130 3.10.0-1160.71.1.el7.x86_64 #1 SMP Tue Jun 28 15:37:28 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux"
+  },
+  "opentenbase": {
+    "detected": true,
+    "confidence": "high",
+    "detection_evidence": [
+      "server_version 包含 OpenTenBase",
+      "pgxc_node 返回 CN/DN 拓扑",
+      "postgres_binary_version 包含 OpenTenBase",
+      "pg_config_version 包含 OpenTenBase",
+      "发现 OpenTenBase/pgxc 相关配置",
+      "发现 OpenTenBase/PostgreSQL/GTM 相关进程"
+    ],
+    "binary_root": "/data/opentenbase/install/opentenbase_bin_v2.0/bin",
+    "psql": "/data/opentenbase/install/opentenbase_bin_v2.0/bin/psql",
+    "postgres": "/data/opentenbase/install/opentenbase_bin_v2.0/bin/postgres",
+    "pg_config": "/data/opentenbase/install/opentenbase_bin_v2.0/bin/pg_config",
+    "server_version": "PostgreSQL 11.0 @ OpenTenBase_v5.21.8.11 (commit: 760b03096) 2025-10-12 21:07:13 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 9.3.1 20200408 (Red Hat 9.3.1-2), 64-bit",
+    "psql_version": "psql (PostgreSQL) 11.0 @ OpenTenBase_v5.21.8.11 (commit: 760b03096) 2025-10-12 21:07:13",
+    "postgres_binary_version": "postgres (PostgreSQL) 11.0 @ OpenTenBase_v5.21.8.11 (commit: 760b03096) 2025-10-12 21:07:13",
+    "pg_config_version": "PostgreSQL 11.0 @ OpenTenBase_v5.21.8.11 (commit: 760b03096) 2025-10-12 21:07:13"
+  },
+  "management": {
+    "selected": "ambiguous",
+    "confidence": "low",
+    "scores": {
+      "opentenbase_ctl": 4,
+      "pgxc_ctl": 4
+    },
+    "candidates": [
+      {
+        "name": "opentenbase_ctl",
+        "path": "/data/opentenbase/install/opentenbase_bin_v2.0/bin/opentenbase_ctl",
+        "type_a": "opentenbase_ctl is /data/opentenbase/install/opentenbase_bin_v2.0/bin/opentenbase_ctl\nopentenbase_ctl is /data/opentenbase/install/opentenbase_bin_v2.0/bin/opentenbase_ctl\nopentenbase_ctl is /data/opentenbase/install/opentenbase_bin_v2.0/bin/opentenbase_ctl\nopentenbase_ctl is /data/opentenbase/install/opentenbase_bin_v2.0/bin/opentenbase_ctl"
+      },
+      {
+        "name": "pgxc_ctl",
+        "path": "/data/opentenbase/install/opentenbase_bin_v2.0/bin/pgxc_ctl",
+        "type_a": "pgxc_ctl is /data/opentenbase/install/opentenbase_bin_v2.0/bin/pgxc_ctl\npgxc_ctl is /data/opentenbase/install/opentenbase_bin_v2.0/bin/pgxc_ctl\npgxc_ctl is /data/opentenbase/install/opentenbase_bin_v2.0/bin/pgxc_ctl\npgxc_ctl is /data/opentenbase/install/opentenbase_bin_v2.0/bin/pgxc_ctl"
+      },
+      {
+        "name": "psql",
+        "path": "/data/opentenbase/install/opentenbase_bin_v2.0/bin/psql",
+        "type_a": "psql is /data/opentenbase/install/opentenbase_bin_v2.0/bin/psql\npsql is /data/opentenbase/install/opentenbase_bin_v2.0/bin/psql\npsql is /data/opentenbase/install/opentenbase_bin_v2.0/bin/psql\npsql is /data/opentenbase/install/opentenbase_bin_v2.0/bin/psql\npsql is /bin/psql\npsql is /usr/bin/psql"
+      },
+      {
+        "name": "postgres",
+        "path": "/data/opentenbase/install/opentenbase_bin_v2.0/bin/postgres",
+        "type_a": "postgres is /data/opentenbase/install/opentenbase_bin_v2.0/bin/postgres\npostgres is /data/opentenbase/install/opentenbase_bin_v2.0/bin/postgres\npostgres is /data/opentenbase/install/opentenbase_bin_v2.0/bin/postgres\npostgres is /data/opentenbase/install/opentenbase_bin_v2.0/bin/postgres"
+      },
+      {
+        "name": "pg_config",
+        "path": "/data/opentenbase/install/opentenbase_bin_v2.0/bin/pg_config",
+        "type_a": "pg_config is /data/opentenbase/install/opentenbase_bin_v2.0/bin/pg_config\npg_config is /data/opentenbase/install/opentenbase_bin_v2.0/bin/pg_config\npg_config is /data/opentenbase/install/opentenbase_bin_v2.0/bin/pg_config\npg_config is /data/opentenbase/install/opentenbase_bin_v2.0/bin/pg_config\npg_config is /bin/pg_config\npg_config is /usr/bin/pg_config"
+      }
+    ],
+    "evidence": [
+      "opentenbase_ctl 二进制：/data/opentenbase/install/opentenbase_bin_v2.0/bin/opentenbase_ctl",
+      "pgxc_ctl 二进制：/data/opentenbase/install/opentenbase_bin_v2.0/bin/pgxc_ctl",
+      "psql 二进制：/data/opentenbase/install/opentenbase_bin_v2.0/bin/psql",
+      "postgres 二进制：/data/opentenbase/install/opentenbase_bin_v2.0/bin/postgres",
+      "pg_config 二进制：/data/opentenbase/install/opentenbase_bin_v2.0/bin/pg_config",
+      "opentenbase_ctl 风格配置候选：/data/opentenbase/OpenTenBase/contrib/opentenbase_ctl.new/config/config.ini",
+      "opentenbase_ctl 风格配置候选：/data/opentenbase/OpenTenBase/contrib/opentenbase_ctl/config/config.ini",
+      "pgxc_ctl 配置：/data/opentenbase/OpenTenBase/src/test/opentenbase_test/pgxc_ctl.conf",
+      "opentenbase_ctl 风格配置候选：/data/opentenbase/backup/opentenbase_ctl_20260619_054001/opentenbase_ctl.source/config/config.ini",
+      "pgxc_ctl 配置：/data/opentenbase/install/opentenbase_bin_v2.0/pgxc_ctl.conf",
+      "opentenbase_ctl 风格配置候选：/data/opentenbase/opentenbase_ctl_current/config.ini",
+      "pgxc_ctl 配置：/data/opentenbase/pgxc_ctl/pgxc_ctl.conf",
+      "相关进程行数：45",
+      "pgxc_node 可读，已获得数据库拓扑"
+    ]
+  },
+  "config_files": [
+    {
+      "path": "/data/opentenbase/OpenTenBase/contrib/opentenbase_ctl.new/config/config.ini"
+    },
+    {
+      "path": "/data/opentenbase/OpenTenBase/contrib/opentenbase_ctl/config/config.ini"
+    },
+    {
+      "path": "/data/opentenbase/OpenTenBase/src/test/opentenbase_test/pgxc_ctl.conf"
+    },
+    {
+      "path": "/data/opentenbase/backup/opentenbase_ctl_20260619_054001/opentenbase_ctl.source/config/config.ini"
+    },
+    {
+      "path": "/data/opentenbase/install/opentenbase_bin_v2.0/pgxc_ctl.conf"
+    },
+    {
+      "path": "/data/opentenbase/opentenbase_ctl_current/config.ini"
+    },
+    {
+      "path": "/data/opentenbase/pgxc_ctl/pgxc_ctl.conf"
+    }
+  ],
+  "config_topology": {
+    "gtm": [],
+    "coordinators": [
+      {
+        "source": "/data/opentenbase/install/opentenbase_bin_v2.0/pgxc_ctl.conf",
+        "role": "coordinator",
+        "name": "cn001",
+        "host": "127.0.0.1",
+        "port": "30004"
+      },
+      {
+        "source": "/data/opentenbase/install/opentenbase_bin_v2.0/pgxc_ctl.conf",
+        "role": "coordinator",
+        "name": "cn002",
+        "host": "127.0.0.1",
+        "port": "30005"
+      },
+      {
+        "source": "/data/opentenbase/install/opentenbase_bin_v2.0/pgxc_ctl.conf",
+        "role": "coordinator",
+        "name": "cn003",
+        "host": "127.0.0.1",
+        "port": "30006"
+      },
+      {
+        "source": "/data/opentenbase/pgxc_ctl/pgxc_ctl.conf",
+        "role": "coordinator",
+        "name": "cn001",
+        "host": "otb130",
+        "port": "30004"
+      },
+      {
+        "source": "/data/opentenbase/pgxc_ctl/pgxc_ctl.conf",
+        "role": "coordinator",
+        "name": "cn002",
+        "host": "otb132",
+        "port": "30005"
+      }
+    ],
+    "datanodes": [
+      {
+        "source": "/data/opentenbase/install/opentenbase_bin_v2.0/pgxc_ctl.conf",
+        "role": "datanode",
+        "name": "dn001",
+        "host": "127.0.0.1",
+        "port": "20008"
+      },
+      {
+        "source": "/data/opentenbase/install/opentenbase_bin_v2.0/pgxc_ctl.conf",
+        "role": "datanode",
+        "name": "dn002",
+        "host": "127.0.0.1",
+        "port": "20009"
+      },
+      {
+        "source": "/data/opentenbase/install/opentenbase_bin_v2.0/pgxc_ctl.conf",
+        "role": "datanode",
+        "name": "dn003",
+        "host": "127.0.0.1",
+        "port": "20010"
+      },
+      {
+        "source": "/data/opentenbase/pgxc_ctl/pgxc_ctl.conf",
+        "role": "datanode",
+        "name": "dn001",
+        "host": "otb130",
+        "port": "20008"
+      },
+      {
+        "source": "/data/opentenbase/pgxc_ctl/pgxc_ctl.conf",
+        "role": "datanode",
+        "name": "dn002",
+        "host": "otb132",
+        "port": "20009"
+      }
+    ],
+    "warnings": []
+  },
+  "processes": [
+    {
+      "line": "root       2006   1991  0 Jun20 tty1     00:00:00 su - opentenbase",
+      "role_hint": "unknown"
+    },
+    {
+      "line": "root       2423   2397  0 Jun20 pts/0    00:00:00 su - opentenbase",
+      "role_hint": "unknown"
+    },
+    {
+      "line": "root       5503   5495  1 07:45 ?        00:00:00 su - opentenbase -c /opt/python3.11/bin/python3.11 - --json --db-user opentenbase --database postgres --connect-timeout 5 --config-search-root /data/opentenbase --extra-config-search-root /opt --extra-config-search-root /home/opentenbase",
+      "role_hint": "postgres"
+    },
+    {
+      "line": "openten+   5508   5503 17 07:45 ?        00:00:00 /opt/python3.11/bin/python3.11 - --json --db-user opentenbase --database postgres --connect-timeout 5 --config-search-root /data/opentenbase --extra-config-search-root /opt --extra-config-search-root /home/opentenbase",
+      "role_hint": "postgres"
+    },
+    {
+      "line": "openten+  41273      1  0 Jun20 ?        00:01:42 gtm -D /data/opentenbase/run/instance/pluginctl_current/gtm0001/data",
+      "role_hint": "gtm"
+    },
+    {
+      "line": "openten+  41280      1  0 Jun20 ?        00:00:19 /data/opentenbase/install/opentenbase_bin_v2.0/bin/postgres --coordinator -D /data/opentenbase/run/instance/pluginctl_current/cn0001/data -i",
+      "role_hint": "coordinator"
+    },
+    {
+      "line": "openten+  41281      1  0 Jun20 ?        00:00:16 /data/opentenbase/install/opentenbase_bin_v2.0/bin/postgres --datanode -D /data/opentenbase/run/instance/pluginctl_current/dn0001/data -i",
+      "role_hint": "datanode"
+    },
+    {
+      "line": "openten+  41336  41281  0 Jun20 ?        00:00:06 postgres: logger process   ",
+      "role_hint": "postgres"
+    },
+    {
+      "line": "openten+  41338  41281  0 Jun20 ?        00:00:00 postgres: checkpointer process   ",
+      "role_hint": "postgres"
+    },
+    {
+      "line": "openten+  41339  41281  0 Jun20 ?        00:00:02 postgres: writer process   ",
+      "role_hint": "postgres"
+    },
+    {
+      "line": "openten+  41340  41281  0 Jun20 ?        00:00:00 postgres: invalidate buffer process   ",
+      "role_hint": "postgres"
+    },
+    {
+      "line": "openten+  41341  41281  0 Jun20 ?        00:00:09 postgres: wal writer process   ",
+      "role_hint": "postgres"
+    },
+    {
+      "line": "openten+  41342  41281  0 Jun20 ?        00:01:05 postgres: forward sender process   ",
+      "role_hint": "postgres"
+    },
+    {
+      "line": "openten+  41343  41281  0 Jun20 ?        00:00:02 postgres: autovacuum launcher process   ",
+      "role_hint": "postgres"
+    },
+    {
+      "line": "openten+  41344  41281  0 Jun20 ?        00:00:01 postgres: stats collector process   ",
+      "role_hint": "postgres"
+    },
+    {
+      "line": "openten+  41345  41281  0 Jun20 ?        00:00:00 postgres: pooler process   ",
+      "role_hint": "postgres"
+    },
+    {
+      "line": "openten+  41346  41281  0 Jun20 ?        00:00:03 postgres: forward recver process   ",
+      "role_hint": "postgres"
+    },
+    {
+      "line": "openten+  41349  41281  0 Jun20 ?        00:00:00 postgres: logical replication launcher   ",
+      "role_hint": "postgres"
+    },
+    {
+      "line": "openten+  41355  41280  0 Jun20 ?        00:00:00 postgres: checkpointer process   ",
+      "role_hint": "postgres"
+    },
+    {
+      "line": "openten+  41356  41280  0 Jun20 ?        00:00:02 postgres: writer process   ",
+      "role_hint": "postgres"
+    },
+    {
+      "line": "openten+  41357  41280  0 Jun20 ?        00:00:00 postgres: invalidate buffer process   ",
+      "role_hint": "postgres"
+    },
+    {
+      "line": "openten+  41358  41280  0 Jun20 ?        00:00:09 postgres: wal writer process   ",
+      "role_hint": "postgres"
+    },
+    {
+      "line": "openten+  41359  41280  0 Jun20 ?        00:01:04 postgres: forward sender process   ",
+      "role_hint": "postgres"
+    },
+    {
+      "line": "openten+  41360  41280  0 Jun20 ?        00:00:02 postgres: autovacuum launcher process   ",
+      "role_hint": "postgres"
+    },
+    {
+      "line": "openten+  41361  41280  0 Jun20 ?        00:00:03 postgres: 2pc clean launcher   ",
+      "role_hint": "postgres"
+    },
+    {
+      "line": "openten+  41362  41280  0 Jun20 ?        00:00:01 postgres: stats collector process   ",
+      "role_hint": "postgres"
+    },
+    {
+      "line": "openten+  41363  41280  0 Jun20 ?        00:00:00 postgres: pooler process   ",
+      "role_hint": "postgres"
+    },
+    {
+      "line": "openten+  41364  41280  0 Jun20 ?        00:00:54 postgres: forward recver process   ",
+      "role_hint": "postgres"
+    },
+    {
+      "line": "openten+  41366  41280  0 Jun20 ?        00:00:00 postgres: global deadlock detector   ",
+      "role_hint": "postgres"
+    },
+    {
+      "line": "openten+  41371  41280  0 Jun20 ?        00:00:00 postgres: logical replication launcher   ",
+      "role_hint": "postgres"
+    },
+    {
+      "line": "openten+  41715  41281  0 Jun20 ?        00:00:00 postgres: opentenbase postgres 192.168.244.130(55384) idle",
+      "role_hint": "postgres"
+    },
+    {
+      "line": "openten+  41716  41281  0 Jun20 ?        00:00:00 postgres: opentenbase postgres 192.168.244.130(55386) idle",
+      "role_hint": "postgres"
+    },
+    {
+      "line": "openten+  41717  41281  0 Jun20 ?        00:00:00 postgres: opentenbase postgres 192.168.244.130(55388) idle",
+      "role_hint": "postgres"
+    },
+    {
+      "line": "openten+  41718  41281  0 Jun20 ?        00:00:00 postgres: opentenbase postgres 192.168.244.130(55390) idle",
+      "role_hint": "postgres"
+    },
+    {
+      "line": "openten+  41724  41280  0 Jun20 ?        00:00:00 postgres: opentenbase postgres 192.168.244.132(56254) idle",
+      "role_hint": "postgres"
+    },
+    {
+      "line": "openten+  41726  41280  0 Jun20 ?        00:00:00 postgres: opentenbase postgres 192.168.244.132(56258) idle",
+      "role_hint": "postgres"
+    },
+    {
+      "line": "openten+  41728  41280  0 Jun20 ?        00:00:00 postgres: opentenbase postgres 192.168.244.132(56268) idle",
+      "role_hint": "postgres"
+    },
+    {
+      "line": "openten+  41730  41280  0 Jun20 ?        00:00:00 postgres: opentenbase postgres 192.168.244.132(56274) idle",
+      "role_hint": "postgres"
+    },
+    {
+      "line": "openten+  41736  41281  0 Jun20 ?        00:00:00 postgres: opentenbase postgres 192.168.244.132(44478) idle",
+      "role_hint": "postgres"
+    },
+    {
+      "line": "openten+  41737  41281  0 Jun20 ?        00:00:00 postgres: opentenbase postgres 192.168.244.132(44480) idle",
+      "role_hint": "postgres"
+    },
+    {
+      "line": "openten+  41740  41281  0 Jun20 ?        00:00:00 postgres: opentenbase postgres 192.168.244.132(44482) idle",
+      "role_hint": "postgres"
+    },
+    {
+      "line": "openten+  41742  41281  0 Jun20 ?        00:00:00 postgres: opentenbase postgres 192.168.244.132(44484) idle",
+      "role_hint": "postgres"
+    },
+    {
+      "line": "openten+  45593  41281  0 03:38 ?        00:00:00 postgres: opentenbase postgres 192.168.244.130(47190) idle",
+      "role_hint": "postgres"
+    },
+    {
+      "line": "openten+  45729  41280  0 Jun20 ?        00:00:00 postgres: opentenbase postgres 192.168.244.132(56328) idle",
+      "role_hint": "postgres"
+    },
+    {
+      "line": "openten+  45730  41281  0 Jun20 ?        00:00:00 postgres: opentenbase postgres 192.168.244.132(44526) idle",
+      "role_hint": "postgres"
+    }
+  ],
+  "ports": [
+    {
+      "line": "LISTEN     0      128          *:30004                    *:*                   users:((\"postgres\",pid=41280,fd=3))",
+      "ports": [
+        "30004"
+      ]
+    },
+    {
+      "line": "LISTEN     0      128          *:20028                    *:*                   users:((\"postgres\",pid=41346,fd=3))",
+      "ports": [
+        "20028"
+      ]
+    },
+    {
+      "line": "LISTEN     0      128          *:30024                    *:*                   users:((\"postgres\",pid=41364,fd=3))",
+      "ports": [
+        "30024"
+      ]
+    },
+    {
+      "line": "LISTEN     0      128          *:20008                    *:*                   users:((\"postgres\",pid=41281,fd=3))",
+      "ports": [
+        "20008"
+      ]
+    },
+    {
+      "line": "LISTEN     0      128          *:6666                     *:*                   users:((\"gtm\",pid=41273,fd=3))",
+      "ports": [
+        "6666"
+      ]
+    },
+    {
+      "line": "LISTEN     0      128       [::]:30004                 [::]:*                   users:((\"postgres\",pid=41280,fd=4))",
+      "ports": [
+        "30004"
+      ]
+    },
+    {
+      "line": "LISTEN     0      128       [::]:20028                 [::]:*                   users:((\"postgres\",pid=41346,fd=4))",
+      "ports": [
+        "20028"
+      ]
+    },
+    {
+      "line": "LISTEN     0      128       [::]:30024                 [::]:*                   users:((\"postgres\",pid=41364,fd=4))",
+      "ports": [
+        "30024"
+      ]
+    },
+    {
+      "line": "LISTEN     0      128       [::]:20008                 [::]:*                   users:((\"postgres\",pid=41281,fd=4))",
+      "ports": [
+        "20008"
+      ]
+    },
+    {
+      "line": "LISTEN     0      128       [::]:6666                  [::]:*                   users:((\"gtm\",pid=41273,fd=4))",
+      "ports": [
+        "6666"
+      ]
+    }
+  ],
+  "database": {
+    "reachable_cn": [
+      {
+        "host": "127.0.0.1",
+        "port": "30004",
+        "source": "/data/opentenbase/install/opentenbase_bin_v2.0/pgxc_ctl.conf"
+      }
+    ],
+    "server_version": "PostgreSQL 11.0 @ OpenTenBase_v5.21.8.11 (commit: 760b03096) 2025-10-12 21:07:13 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 9.3.1 20200408 (Red Hat 9.3.1-2), 64-bit",
+    "current_database": "postgres",
+    "current_user": "opentenbase",
+    "pgxc_node_query_ok": true,
+    "pgxc_node_error": ""
+  },
+  "topology": {
+    "gtm": [
+      {
+        "name": "gtm",
+        "type": "G",
+        "host": "otb130",
+        "port": "6666",
+        "source": "pgxc_node"
+      }
+    ],
+    "coordinators": [
+      {
+        "name": "cn001",
+        "type": "C",
+        "host": "otb130",
+        "port": "30004",
+        "source": "pgxc_node"
+      },
+      {
+        "name": "cn002",
+        "type": "C",
+        "host": "otb132",
+        "port": "30005",
+        "source": "pgxc_node"
+      }
+    ],
+    "datanodes": [
+      {
+        "name": "dn001",
+        "type": "D",
+        "host": "otb130",
+        "port": "20008",
+        "source": "pgxc_node"
+      },
+      {
+        "name": "dn002",
+        "type": "D",
+        "host": "otb132",
+        "port": "20009",
+        "source": "pgxc_node"
+      }
+    ]
+  },
+  "consistency": {
+    "status": "ambiguous",
+    "warnings": [
+      "配置候选中的 CN 数量与 pgxc_node 查询结果不同",
+      "配置候选中的 DN 数量与 pgxc_node 查询结果不同",
+      "配置节点端口未在本机监听列表中出现：cn002:30005",
+      "配置节点端口未在本机监听列表中出现：cn003:30006",
+      "配置节点端口未在本机监听列表中出现：dn002:20009",
+      "配置节点端口未在本机监听列表中出现：dn003:20010"
+    ]
+  },
+  "safety": {
+    "write_operations_allowed": false,
+    "reason": "system-entry 按设计只读"
+  },
+  "command_evidence": [
+    {
+      "kind": "shell",
+      "purpose": "读取主机 IP 地址",
+      "argv": [
+        "hostname",
+        "-I"
+      ],
+      "returncode": 0,
+      "stdout": "192.168.244.130 192.168.244.131",
+      "stderr": "",
+      "timeout": false,
+      "started_at": "2026-06-20T23:45:48.898467+00:00",
+      "finished_at": "2026-06-20T23:45:48.901653+00:00",
+      "duration_ms": 3
+    },
+    {
+      "kind": "shell",
+      "purpose": "定位 opentenbase_ctl",
+      "argv": [
+        "bash",
+        "-lc",
+        "type -a opentenbase_ctl"
+      ],
+      "returncode": 0,
+      "stdout": "opentenbase_ctl is /data/opentenbase/install/opentenbase_bin_v2.0/bin/opentenbase_ctl\nopentenbase_ctl is /data/opentenbase/install/opentenbase_bin_v2.0/bin/opentenbase_ctl\nopentenbase_ctl is /data/opentenbase/install/opentenbase_bin_v2.0/bin/opentenbase_ctl\nopentenbase_ctl is /data/opentenbase/install/opentenbase_bin_v2.0/bin/opentenbase_ctl",
+      "stderr": "",
+      "timeout": false,
+      "started_at": "2026-06-20T23:45:48.901769+00:00",
+      "finished_at": "2026-06-20T23:45:48.992820+00:00",
+      "duration_ms": 91
+    },
+    {
+      "kind": "shell",
+      "purpose": "定位 pgxc_ctl",
+      "argv": [
+        "bash",
+        "-lc",
+        "type -a pgxc_ctl"
+      ],
+      "returncode": 0,
+      "stdout": "pgxc_ctl is /data/opentenbase/install/opentenbase_bin_v2.0/bin/pgxc_ctl\npgxc_ctl is /data/opentenbase/install/opentenbase_bin_v2.0/bin/pgxc_ctl\npgxc_ctl is /data/opentenbase/install/opentenbase_bin_v2.0/bin/pgxc_ctl\npgxc_ctl is /data/opentenbase/install/opentenbase_bin_v2.0/bin/pgxc_ctl",
+      "stderr": "",
+      "timeout": false,
+      "started_at": "2026-06-20T23:45:48.992973+00:00",
+      "finished_at": "2026-06-20T23:45:49.084235+00:00",
+      "duration_ms": 91
+    },
+    {
+      "kind": "shell",
+      "purpose": "定位 psql",
+      "argv": [
+        "bash",
+        "-lc",
+        "type -a psql"
+      ],
+      "returncode": 0,
+      "stdout": "psql is /data/opentenbase/install/opentenbase_bin_v2.0/bin/psql\npsql is /data/opentenbase/install/opentenbase_bin_v2.0/bin/psql\npsql is /data/opentenbase/install/opentenbase_bin_v2.0/bin/psql\npsql is /data/opentenbase/install/opentenbase_bin_v2.0/bin/psql\npsql is /bin/psql\npsql is /usr/bin/psql",
+      "stderr": "",
+      "timeout": false,
+      "started_at": "2026-06-20T23:45:49.084524+00:00",
+      "finished_at": "2026-06-20T23:45:49.171822+00:00",
+      "duration_ms": 87
+    },
+    {
+      "kind": "shell",
+      "purpose": "定位 postgres",
+      "argv": [
+        "bash",
+        "-lc",
+        "type -a postgres"
+      ],
+      "returncode": 0,
+      "stdout": "postgres is /data/opentenbase/install/opentenbase_bin_v2.0/bin/postgres\npostgres is /data/opentenbase/install/opentenbase_bin_v2.0/bin/postgres\npostgres is /data/opentenbase/install/opentenbase_bin_v2.0/bin/postgres\npostgres is /data/opentenbase/install/opentenbase_bin_v2.0/bin/postgres",
+      "stderr": "",
+      "timeout": false,
+      "started_at": "2026-06-20T23:45:49.172091+00:00",
+      "finished_at": "2026-06-20T23:45:49.260097+00:00",
+      "duration_ms": 88
+    },
+    {
+      "kind": "shell",
+      "purpose": "定位 pg_config",
+      "argv": [
+        "bash",
+        "-lc",
+        "type -a pg_config"
+      ],
+      "returncode": 0,
+      "stdout": "pg_config is /data/opentenbase/install/opentenbase_bin_v2.0/bin/pg_config\npg_config is /data/opentenbase/install/opentenbase_bin_v2.0/bin/pg_config\npg_config is /data/opentenbase/install/opentenbase_bin_v2.0/bin/pg_config\npg_config is /data/opentenbase/install/opentenbase_bin_v2.0/bin/pg_config\npg_config is /bin/pg_config\npg_config is /usr/bin/pg_config",
+      "stderr": "",
+      "timeout": false,
+      "started_at": "2026-06-20T23:45:49.260295+00:00",
+      "finished_at": "2026-06-20T23:45:49.348847+00:00",
+      "duration_ms": 88
+    },
+    {
+      "kind": "shell",
+      "purpose": "查看 OpenTenBase/PostgreSQL 相关进程",
+      "argv": [
+        "ps",
+        "-ef"
+      ],
+      "returncode": 0,
+      "stdout": "UID         PID   PPID  C STIME TTY          TIME CMD\nroot          1      0  0 Jun20 ?        00:00:20 /usr/lib/systemd/systemd --switched-root --system --deserialize 22\nroot          2      0  0 Jun20 ?        00:00:00 [kthreadd]\nroot          4      2  0 Jun20 ?        00:00:00 [kworker/0:0H]\nroot          6      2  0 Jun20 ?        00:00:01 [ksoftirqd/0]\nroot          7      2  0 Jun20 ?        00:00:01 [migration/0]\nroot          8      2  0 Jun20 ?        00:00:00 [rcu_bh]\nroot          9      2  0 Jun20 ?        00:00:41 [rcu_sched]\nroot         10      2  0 Jun20 ?        00:00:00 [lru-add-drain]\nroot         11      2  0 Jun20 ?        00:00:00 [watchdog/0]\nroot         12      2  0 Jun20 ?        00:00:00 [watchdog/1]\nroot         13      2  0 Jun20 ?        00:00:03 [migration/1]\nroot         14      2  0 Jun20 ?        00:00:00 [ksoftirqd/1]\nroot         16      2  0 Jun20 ?        00:00:00 [kworker/1:0H]\nroot         17      2  0 Jun20 ?        00:00:00 [watchdog/2]\nroot         18      2  0 Jun20 ?        00:00:01 [migration/2]\nroot         19      2  0 Jun20 ?        00:00:00 [ksoftirqd/2]\nroot         21      2  0 Jun20 ?        00:00:00 [kworker/2:0H]\nroot         22      2  0 Jun20 ?        00:00:00 [watchdog/3]\nroot         23      2  0 Jun20 ?        00:00:01 [migration/3]\nroot         24      2  0 Jun20 ?        00:00:00 [ksoftirqd/3]\nroot         26      2  0 Jun20 ?        00:00:00 [kworker/3:0H]\nroot         27      2  0 Jun20 ?        00:00:00 [watchdog/4]\nroot         28      2  0 Jun20 ?        00:00:01 [migration/4]\nroot         29      2  0 Jun20 ?        00:00:35 [ksoftirqd/4]\nroot         31      2  0 Jun20 ?        00:00:00 [kworker/4:0H]\nroot         32      2  0 Jun20 ?        00:00:00 [watchdog/5]\nroot         33      2  0 Jun20 ?        00:00:03 [migration/5]\nroot         34      2  0 Jun20 ?        00:00:01 [ksoftirqd/5]\nroot         36      2  0 Jun20 ?        00:00:00 [kworker/5:0H]\nroot         37      2  0 Jun20 ?        00:00:00 [watchdog/6]\nroot         38      2  0 Jun20 ?        00:00:01 [migration/6]\nroot         39      2  0 Jun20 ?        00:00:00 [ksoftirqd/6]\nroot         41      2  0 Jun20 ?        00:00:00 [kworker/6:0H]\nroot         42      2  0 Jun20 ?        00:00:00 [watchdog/7]\nroot         43      2  0 Jun20 ?        00:00:01 [migration/7]\nroot         44      2  0 Jun20 ?        00:00:00 [ksoftirqd/7]\nroot         46      2  0 Jun20 ?        00:00:00 [kworker/7:0H]\nroot         48      2  0 Jun20 ?        00:00:00 [kdevtmpfs]\nroot         49      2  0 Jun20 ?        00:00:00 [netns]\nroot         50      2  0 Jun20 ?        00:00:00 [khungtaskd]\nroot         51      2  0 Jun20 ?        00:00:00 [writeback]\nroot         52      2  0 Jun20 ?        00:00:00 [kintegrityd]\nroot         53      2  0 Jun20 ?        00:00:00 [bioset]\nroot         54      2  0 Jun20 ?        00:00:00 [bioset]\nroot         55      2  0 Jun20 ?        00:00:00 [bioset]\nroot         56      2  0 Jun20 ?        00:00:00 [kblockd]\nroot         57      2  0 Jun20 ?        00:00:00 [md]\nroot         58      2  0 Jun20 ?        00:00:00 [edac-poller]\nroot         59      2  0 Jun20 ?        00:00:00 [watchdogd]\nroot         68      2  0 Jun20 ?        00:00:00 [kswapd0]\nroot         69      2  0 Jun20 ?        00:00:00 [ksmd]\nroot         70      2  0 Jun20 ?        00:00:00 [khugepaged]\nroot         71      2  0 Jun20 ?        00:00:00 [crypto]\nroot         79      2  0 Jun20 ?        00:00:00 [kthrotld]\nroot         81      2  0 Jun20 ?        00:00:00 [kmpath_rdacd]\nroot         82      2  0 Jun20 ?        00:00:00 [kaluad]\nroot         83      2  0 Jun20 ?        00:00:00 [kpsmoused]\nroot         85      2  0 Jun20 ?        00:00:00 [ipv6_addrconf]\nroot         99      2  0 Jun20 ?        00:00:00 [deferwq]\nroot        135      2  0 Jun20 ?        00:00:05 [kauditd]\nroot        330      2  0 Jun20 ?        00:00:00 [mpt_poll_0]\nroot        332      2  0 Jun20 ?        00:00:00 [mpt/0]\nroot        336      2  0 Jun20 ?        00:00:00 [ata_sff]\nroot        338      2  0 Jun20 ?        00:00:00 [nfit]\nroot        341      2  0 Jun20 ?        00:00:00 [scsi_eh_0]\nroot        342      2  0 Jun20 ?        00:00:00 [scsi_tmf_0]\nroot        344      2  0 Jun20 ?        00:00:00 [scsi_eh_1]\nroot        345      2  0 Jun20 ?        00:00:00 [scsi_tmf_1]\nroot        346      2  0 Jun20 ?        00:00:00 [scsi_eh_2]\nroot        347      2  0 Jun20 ?        00:00:00 [scsi_tmf_2]\nroot        350      2  0 Jun20 ?        00:00:00 [irq/16-vmwgfx]\nroot        351      2  0 Jun20 ?        00:00:00 [ttm_swap]\nroot        389      2  0 Jun20 ?        00:00:00 [kworker/0:1H]\nroot        429      2  0 Jun20 ?        00:00:00 [kdmflush]\nroot        430      2  0 Jun20 ?        00:00:00 [bioset]\nroot        440      2  0 Jun20 ?        00:00:00 [kdmflush]\nroot        441      2  0 Jun20 ?        00:00:00 [bioset]\nroot        455      2  0 Jun20 ?        00:00:00 [bioset]\nroot        456      2  0 Jun20 ?        00:00:00 [xfsalloc]\nroot        457      2  0 Jun20 ?        00:00:00 [xfs_mru_cache]\nroot        458      2  0 Jun20 ?        00:00:00 [xfs-buf/dm-0]\nroot        459      2  0 Jun20 ?        00:00:00 [xfs-data/dm-0]\nroot        460      2  0 Jun20 ?        00:00:00 [xfs-conv/dm-0]\nroot        461      2  0 Jun20 ?        00:00:00 [xfs-cil/dm-0]\nroot        462      2  0 Jun20 ?        00:00:00 [xfs-reclaim/dm-]\nroot        463      2  0 Jun20 ?        00:00:00 [xfs-log/dm-0]\nroot        464      2  0 Jun20 ?        00:00:00 [xfs-eofblocks/d]\nroot        465      2  0 Jun20 ?        00:00:41 [xfsaild/dm-0]\nroot        466      2  0 Jun20 ?        00:00:00 [kworker/4:1H]\nroot        467      2  0 Jun20 ?        00:00:00 [kworker/5:1H]\nroot        547      1  0 Jun20 ?        00:00:16 /usr/lib/systemd/systemd-journald\nroot        577      1  0 Jun20 ?        00:00:00 /usr/sbin/lvmetad -f\nroot        585      1  0 Jun20 ?        00:00:02 /usr/lib/systemd/systemd-udevd\nroot        626      2  0 03:24 ?        00:00:02 [kworker/4:2]\nroot        697      2  0 Jun20 ?        00:00:00 [xfs-buf/sda1]\nroot        698      2  0 Jun20 ?        00:00:00 [xfs-data/sda1]\nroot        699      2  0 Jun20 ?        00:00:00 [xfs-conv/sda1]\nroot        700      2  0 Jun20 ?        00:00:00 [xfs-cil/sda1]\nroot        701      2  0 Jun20 ?        00:00:00 [xfs-reclaim/sda]\nroot        702      2  0 Jun20 ?        00:00:00 [xfs-log/sda1]\nroot        703      2  0 Jun20 ?        00:00:00 [xfs-eofblocks/s]\nroot        704      2  0 Jun20 ?        00:00:00 [xfsaild/sda1]\nroot        705      2  0 Jun20 ?        00:00:00 [kworker/1:1H]\nroot        722      1  0 Jun20 ?        00:00:08 /sbin/auditd\nroot        731      2  0 07:32 ?        00:00:00 [kworker/1:1]\nroot        747      1  0 Jun20 ?        00:00:02 /usr/sbin/irqbalance --foreground\npolkitd     748      1  0 Jun20 ?        00:00:11 /usr/lib/polkit-1/polkitd --no-debug\nroot        752      1  0 Jun20 ?        00:00:00 /usr/bin/VGAuthService -s\nroot        753      1  0 Jun20 ?        00:01:46 /usr/bin/vmtoolsd\ndbus        754      1  0 Jun20 ?        00:00:29 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation\nroot        765      1  0 Jun20 ?        00:00:09 /usr/sbin/NetworkManager --no-daemon\nroot        767      1  0 Jun20 ?        00:00:17 /usr/lib/systemd/systemd-logind\nroot        772      1  0 Jun20 ?        00:00:00 /usr/sbin/crond -n\nroot        777      1  0 Jun20 ?        00:00:00 login -- root\nroot        905      2  0 03:24 ?        00:00:01 [kworker/5:0]\nroot       1160      2  0 Jun20 ?        00:00:00 [kworker/3:1H]\nroot       1181      1  0 Jun20 ?        00:00:00 /sbin/dhclient -1 -q -lf /var/lib/dhclient/dhclient--ens33.lease -pf /var/run/dhclient-ens33.pid -H otb130 ens33\nroot       1236      2  0 03:24 ?        00:00:00 [kworker/7:0]\nroot       1336      1  0 Jun20 ?        00:00:10 /usr/bin/python2 -Es /usr/sbin/tuned -l -P\nroot       1339      1  0 Jun20 ?        00:00:03 /usr/sbin/sshd -D\nroot       1340      1  0 Jun20 ?        00:00:15 /usr/sbin/rsyslogd -n\nroot       1491      1  0 Jun20 ?        00:00:00 /usr/libexec/postfix/master -w\npostfix    1495   1491  0 Jun20 ?        00:00:00 qmgr -l -t unix -u\nroot       1675      2  0 Jun20 ?        00:00:00 [kworker/6:1H]\nroot       1911      2  0 Jun20 ?        00:00:00 [kworker/2:1H]\nroot       1991    777  0 Jun20 tty1     00:00:00 -bash\nroot       2006   1991  0 Jun20 tty1     00:00:00 su - opentenbase\nopenten+   2007   2006  0 Jun20 tty1     00:00:00 -bash\nroot       2118      2  0 Jun20 ?        00:00:00 [kworker/7:1H]\nroot       2393   1339  0 Jun20 ?        00:00:35 sshd: root@pts/0\nroot       2395   1339  0 Jun20 ?        00:00:00 sshd: root@notty\nroot       2397   2393  0 Jun20 pts/0    00:00:00 -bash\nroot       2418   2395  0 Jun20 ?        00:00:00 /usr/libexec/openssh/sftp-server\nroot       2423   2397  0 Jun20 pts/0    00:00:00 su - opentenbase\nopenten+   2424   2423  0 Jun20 pts/0    00:00:00 -bash\npostfix    4590   1491  0 07:43 ?        00:00:00 pickup -l -t unix -u\nroot       4609      2  0 07:43 ?        00:00:00 [kworker/1:0]\nroot       5495   1339  3 07:45 ?        00:00:00 sshd: root@notty\nroot       5503   5495  1 07:45 ?        00:00:00 su - opentenbase -c /opt/python3.11/bin/python3.11 - --json --db-user opentenbase --database postgres --connect-timeout 5 --config-search-root /data/opentenbase --extra-config-search-root /opt --extra-config-search-root /home/opentenbase\nopenten+   5508   5503 17 07:45 ?        00:00:00 /opt/python3.11/bin/python3.11 - --json --db-user opentenbase --database postgres --connect-timeout 5 --config-search-root /data/opentenbase --extra-config-search-root /opt --extra-config-search-root /home/opentenbase\nopenten+   5601   5508  0 07:45 ?        00:00:00 ps -ef\nroot      24148      2  0 03:31 ?        00:00:00 [kworker/3:1]\nroot      40510      2  0 03:34 ?        00:00:00 [kworker/u256:1]\nopenten+  41273      1  0 Jun20 ?        00:01:42 gtm -D /data/opentenbase/run/instance/pluginctl_current/gtm0001/data\nopenten+  41280      1  0 Jun20 ?        00:00:19 /data/opentenbase/install/opentenbase_bin_v2.0/bin/postgres --coordinator -D /data/opentenbase/run/instance/pluginctl_current/cn0001/data -i\nopenten+  41281      1  0 Jun20 ?        00:00:16 /data/opentenbase/install/opentenbase_bin_v2.0/bin/postgres --datanode -D /data/opentenbase/run/instance/pluginctl_current/dn0001/data -i\nopenten+  41336  41281  0 Jun20 ?        00:00:06 postgres: logger process   \nopenten+  41338  41281  0 Jun20 ?        00:00:00 postgres: checkpointer process   \nopenten+  41339  41281  0 Jun20 ?        00:00:02 postgres: writer process   \nopenten+  41340  41281  0 Jun20 ?        00:00:00 postgres: invalidate buffer process   \nopenten+  41341  41281  0 Jun20 ?        00:00:09 postgres: wal writer process   \nopenten+  41342  41281  0 Jun20 ?        00:01:05 postgres: forward sender process   \nopenten+  41343  41281  0 Jun20 ?        00:00:02 postgres: autovacuum launcher process   \nopenten+  41344  41281  0 Jun20 ?        00:00:01 postgres: stats collector process   \nopenten+  41345  41281  0 Jun20 ?        00:00:00 postgres: pooler process   \nopenten+  41346  41281  0 Jun20 ?        00:00:03 postgres: forward recver process   \nopenten+  41349  41281  0 Jun20 ?        00:00:00 postgres: logical replication launcher   \nopenten+  41355  41280  0 Jun20 ?        00:00:00 postgres: checkpointer process   \nopenten+  41356  41280  0 Jun20 ?        00:00:02 postgres: writer process   \nopenten+  41357  41280  0 Jun20 ?        00:00:00 postgres: invalidate buffer process   \nopenten+  41358  41280  0 Jun20 ?        00:00:09 postgres: wal writer process   \nopenten+  41359  41280  0 Jun20 ?        00:01:04 postgres: forward sender process   \nopenten+  41360  41280  0 Jun20 ?        00:00:02 postgres: autovacuum launcher process   \nopenten+  41361  41280  0 Jun20 ?        00:00:03 postgres: 2pc clean launcher   \nopenten+  41362  41280  0 Jun20 ?        00:00:01 postgres: stats collector process   \nopenten+  41363  41280  0 Jun20 ?        00:00:00 postgres: pooler process   \nopenten+  41364  41280  0 Jun20 ?        00:00:54 postgres: forward recver process   \nopenten+  41366  41280  0 Jun20 ?        00:00:00 postgres: global deadlock detector   \nopenten+  41371  41280  0 Jun20 ?        00:00:00 postgres: logical replication launcher   \nopenten+  41715  41281  0 Jun20 ?        00:00:00 postgres: opentenbase postgres 192.168.244.130(55384) idle\nopenten+  41716  41281  0 Jun20 ?        00:00:00 postgres: opentenbase postgres 192.168.244.130(55386) idle\nopenten+  41717  41281  0 Jun20 ?        00:00:00 postgres: opentenbase postgres 192.168.244.130(55388) idle\nopenten+  41718  41281  0 Jun20 ?        00:00:00 postgres: opentenbase postgres 192.168.244.130(55390) idle\nopenten+  41724  41280  0 Jun20 ?        00:00:00 postgres: opentenbase postgres 192.168.244.132(56254) idle\nopenten+  41726  41280  0 Jun20 ?        00:00:00 postgres: opentenbase postgres 192.168.244.132(56258) idle\nopenten+  41728  41280  0 Jun20 ?        00:00:00 postgres: opentenbase postgres 192.168.244.132(56268) idle\nopenten+  41730  41280  0 Jun20 ?        00:00:00 postgres: opentenbase postgres 192.168.244.132(56274) idle\nopenten+  41736  41281  0 Jun20 ?        00:00:00 postgres: opentenbase postgres 192.168.244.132(44478) idle\nopenten+  41737  41281  0 Jun20 ?        00:00:00 postgres: opentenbase postgres 192.168.244.132(44480) idle\nopenten+  41740  41281  0 Jun20 ?        00:00:00 postgres: opentenbase postgres 192.168.244.132(44482) idle\nopenten+  41742  41281  0 Jun20 ?        00:00:00 postgres: opentenbase postgres 192.168.244.132(44484) idle\nroot      43035      2  0 03:36 ?        00:00:00 [kworker/7:1]\nroot      43193      2  0 03:36 ?        00:00:00 [kworker/2:0]\nroot      43743      2  0 03:36 ?        00:00:00 [kworker/4:0]\nroot      44552      2  0 03:36 ?        00:00:00 [kworker/6:0]\nopenten+  45593  41281  0 03:38 ?        00:00:00 postgres: opentenbase postgres 192.168.244.130(47190) idle\nopenten+  45729  41280  0 Jun20 ?        00:00:00 postgres: opentenbase postgres 192.168.244.132(56328) idle\nopenten+  45730  41281  0 Jun20 ?        00:00:00 postgres: opentenbase postgres 192.168.244.132(44526) idle\nroot      46720      2  0 03:41 ?        00:00:00 [kworker/6:1]\nroot      63102      2  0 04:26 ?        00:00:00 [kworker/5:2]\nroot     102746      2  0 03:04 ?        00:00:01 [kworker/0:2]\nroot     104043      2  0 03:04 ?        00:00:05 [kworker/6:2]\nroot     106648      2  0 03:08 ?        00:00:00 [kworker/2:3]\nroot     123936      2  0 07:12 ?        00:00:00 [kworker/3:2]\nroot     123981   2393  0 03:16 ?        00:01:13 bash -c while true; do sleep 1;head -v -n 8 /proc/meminfo; head -v -n 2 /proc/stat /proc/version /proc/uptime /proc/loadavg /proc/sys/fs/file-nr /proc/sys/kernel/hostname; tail -v -n 32 /proc/net/dev;echo '==> /proc/df <==';df -l;echo '==> /proc/who <==';who;echo '==> /proc/end <==';echo '##Moba##'; done\nroot     126633      2  0 07:20 ?        00:00:00 [kworker/u256:0]\nroot     128330      2  0 07:24 ?        00:00:00 [kworker/0:0]\nroot     129447      2  0 07:27 ?        00:00:00 [kworker/1:2]",
+      "stderr": "",
+      "timeout": false,
+      "started_at": "2026-06-20T23:45:49.449972+00:00",
+      "finished_at": "2026-06-20T23:45:49.469293+00:00",
+      "duration_ms": 19
+    },
+    {
+      "kind": "shell",
+      "purpose": "查看监听端口",
+      "argv": [
+        "ss",
+        "-lntp"
+      ],
+      "returncode": 0,
+      "stdout": "State      Recv-Q Send-Q Local Address:Port               Peer Address:Port              \nLISTEN     0      128          *:30004                    *:*                   users:((\"postgres\",pid=41280,fd=3))\nLISTEN     0      128          *:22                       *:*                  \nLISTEN     0      100    127.0.0.1:25                       *:*                  \nLISTEN     0      128          *:20028                    *:*                   users:((\"postgres\",pid=41346,fd=3))\nLISTEN     0      128          *:30024                    *:*                   users:((\"postgres\",pid=41364,fd=3))\nLISTEN     0      128          *:20008                    *:*                   users:((\"postgres\",pid=41281,fd=3))\nLISTEN     0      128          *:6666                     *:*                   users:((\"gtm\",pid=41273,fd=3))\nLISTEN     0      128       [::]:30004                 [::]:*                   users:((\"postgres\",pid=41280,fd=4))\nLISTEN     0      128       [::]:22                    [::]:*                  \nLISTEN     0      100      [::1]:25                    [::]:*                  \nLISTEN     0      128       [::]:20028                 [::]:*                   users:((\"postgres\",pid=41346,fd=4))\nLISTEN     0      128       [::]:30024                 [::]:*                   users:((\"postgres\",pid=41364,fd=4))\nLISTEN     0      128       [::]:20008                 [::]:*                   users:((\"postgres\",pid=41281,fd=4))\nLISTEN     0      128       [::]:6666                  [::]:*                   users:((\"gtm\",pid=41273,fd=4))",
+      "stderr": "",
+      "timeout": false,
+      "started_at": "2026-06-20T23:45:49.469548+00:00",
+      "finished_at": "2026-06-20T23:45:49.476977+00:00",
+      "duration_ms": 7
+    },
+    {
+      "kind": "shell",
+      "purpose": "读取 psql 版本",
+      "argv": [
+        "/data/opentenbase/install/opentenbase_bin_v2.0/bin/psql",
+        "--version"
+      ],
+      "returncode": 0,
+      "stdout": "psql (PostgreSQL) 11.0 @ OpenTenBase_v5.21.8.11 (commit: 760b03096) 2025-10-12 21:07:13",
+      "stderr": "",
+      "timeout": false,
+      "started_at": "2026-06-20T23:45:49.477505+00:00",
+      "finished_at": "2026-06-20T23:45:49.483220+00:00",
+      "duration_ms": 5
+    },
+    {
+      "kind": "shell",
+      "purpose": "读取 postgres 版本",
+      "argv": [
+        "/data/opentenbase/install/opentenbase_bin_v2.0/bin/postgres",
+        "--version"
+      ],
+      "returncode": 0,
+      "stdout": "postgres (PostgreSQL) 11.0 @ OpenTenBase_v5.21.8.11 (commit: 760b03096) 2025-10-12 21:07:13",
+      "stderr": "",
+      "timeout": false,
+      "started_at": "2026-06-20T23:45:49.483248+00:00",
+      "finished_at": "2026-06-20T23:45:49.489316+00:00",
+      "duration_ms": 6
+    },
+    {
+      "kind": "shell",
+      "purpose": "读取 pg_config 版本",
+      "argv": [
+        "/data/opentenbase/install/opentenbase_bin_v2.0/bin/pg_config",
+        "--version"
+      ],
+      "returncode": 0,
+      "stdout": "PostgreSQL 11.0 @ OpenTenBase_v5.21.8.11 (commit: 760b03096) 2025-10-12 21:07:13",
+      "stderr": "",
+      "timeout": false,
+      "started_at": "2026-06-20T23:45:49.489345+00:00",
+      "finished_at": "2026-06-20T23:45:49.491382+00:00",
+      "duration_ms": 2
+    },
+    {
+      "kind": "shell",
+      "purpose": "读取 pg_config --bindir",
+      "argv": [
+        "/data/opentenbase/install/opentenbase_bin_v2.0/bin/pg_config",
+        "--bindir"
+      ],
+      "returncode": 0,
+      "stdout": "/data/opentenbase/install/opentenbase_bin_v2.0/bin",
+      "stderr": "",
+      "timeout": false,
+      "started_at": "2026-06-20T23:45:49.491409+00:00",
+      "finished_at": "2026-06-20T23:45:49.492945+00:00",
+      "duration_ms": 1
+    },
+    {
+      "kind": "sql",
+      "purpose": "测试 CN 连接 127.0.0.1:30004",
+      "argv": [
+        "/data/opentenbase/install/opentenbase_bin_v2.0/bin/psql",
+        "-h",
+        "127.0.0.1",
+        "-p",
+        "30004",
+        "-d",
+        "postgres",
+        "-U",
+        "opentenbase",
+        "-Atc",
+        "SELECT 1;"
+      ],
+      "returncode": 0,
+      "stdout": "1",
+      "stderr": "",
+      "timeout": false,
+      "started_at": "2026-06-20T23:45:49.493102+00:00",
+      "finished_at": "2026-06-20T23:45:49.511015+00:00",
+      "duration_ms": 18
+    },
+    {
+      "kind": "sql",
+      "purpose": "读取 server_version 127.0.0.1:30004",
+      "argv": [
+        "/data/opentenbase/install/opentenbase_bin_v2.0/bin/psql",
+        "-h",
+        "127.0.0.1",
+        "-p",
+        "30004",
+        "-d",
+        "postgres",
+        "-U",
+        "opentenbase",
+        "-Atc",
+        "SELECT version();"
+      ],
+      "returncode": 0,
+      "stdout": "PostgreSQL 11.0 @ OpenTenBase_v5.21.8.11 (commit: 760b03096) 2025-10-12 21:07:13 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 9.3.1 20200408 (Red Hat 9.3.1-2), 64-bit",
+      "stderr": "",
+      "timeout": false,
+      "started_at": "2026-06-20T23:45:49.511309+00:00",
+      "finished_at": "2026-06-20T23:45:49.528520+00:00",
+      "duration_ms": 17
+    },
+    {
+      "kind": "sql",
+      "purpose": "读取 current_database 127.0.0.1:30004",
+      "argv": [
+        "/data/opentenbase/install/opentenbase_bin_v2.0/bin/psql",
+        "-h",
+        "127.0.0.1",
+        "-p",
+        "30004",
+        "-d",
+        "postgres",
+        "-U",
+        "opentenbase",
+        "-Atc",
+        "SELECT current_database();"
+      ],
+      "returncode": 0,
+      "stdout": "postgres",
+      "stderr": "",
+      "timeout": false,
+      "started_at": "2026-06-20T23:45:49.528608+00:00",
+      "finished_at": "2026-06-20T23:45:49.545472+00:00",
+      "duration_ms": 16
+    },
+    {
+      "kind": "sql",
+      "purpose": "读取 current_user 127.0.0.1:30004",
+      "argv": [
+        "/data/opentenbase/install/opentenbase_bin_v2.0/bin/psql",
+        "-h",
+        "127.0.0.1",
+        "-p",
+        "30004",
+        "-d",
+        "postgres",
+        "-U",
+        "opentenbase",
+        "-Atc",
+        "SELECT current_user;"
+      ],
+      "returncode": 0,
+      "stdout": "opentenbase",
+      "stderr": "",
+      "timeout": false,
+      "started_at": "2026-06-20T23:45:49.545651+00:00",
+      "finished_at": "2026-06-20T23:45:49.558567+00:00",
+      "duration_ms": 12
+    },
+    {
+      "kind": "sql",
+      "purpose": "读取 pgxc_node 127.0.0.1:30004",
+      "argv": [
+        "/data/opentenbase/install/opentenbase_bin_v2.0/bin/psql",
+        "-h",
+        "127.0.0.1",
+        "-p",
+        "30004",
+        "-d",
+        "postgres",
+        "-U",
+        "opentenbase",
+        "-Atc",
+        "SELECT node_name,node_type,node_host,node_port FROM pgxc_node ORDER BY node_name;"
+      ],
+      "returncode": 0,
+      "stdout": "cn001|C|otb130|30004\ncn002|C|otb132|30005\ndn001|D|otb130|20008\ndn002|D|otb132|20009\ngtm|G|otb130|6666",
+      "stderr": "",
+      "timeout": false,
+      "started_at": "2026-06-20T23:45:49.558687+00:00",
+      "finished_at": "2026-06-20T23:45:49.574549+00:00",
+      "duration_ms": 15
+    },
+    {
+      "kind": "shell",
+      "purpose": "读取当前用户",
+      "argv": [
+        "whoami"
+      ],
+      "returncode": 0,
+      "stdout": "opentenbase",
+      "stderr": "",
+      "timeout": false,
+      "started_at": "2026-06-20T23:45:49.574991+00:00",
+      "finished_at": "2026-06-20T23:45:49.577929+00:00",
+      "duration_ms": 2
+    },
+    {
+      "kind": "shell",
+      "purpose": "读取用户 id",
+      "argv": [
+        "id"
+      ],
+      "returncode": 0,
+      "stdout": "uid=1001(opentenbase) gid=1001(opentenbase) groups=1001(opentenbase)",
+      "stderr": "",
+      "timeout": false,
+      "started_at": "2026-06-20T23:45:49.577946+00:00",
+      "finished_at": "2026-06-20T23:45:49.579679+00:00",
+      "duration_ms": 1
+    },
+    {
+      "kind": "shell",
+      "purpose": "读取主机名",
+      "argv": [
+        "hostname"
+      ],
+      "returncode": 0,
+      "stdout": "otb130",
+      "stderr": "",
+      "timeout": false,
+      "started_at": "2026-06-20T23:45:49.579691+00:00",
+      "finished_at": "2026-06-20T23:45:49.581063+00:00",
+      "duration_ms": 1
+    },
+    {
+      "kind": "shell",
+      "purpose": "读取内核信息",
+      "argv": [
+        "uname",
+        "-a"
+      ],
+      "returncode": 0,
+      "stdout": "Linux otb130 3.10.0-1160.71.1.el7.x86_64 #1 SMP Tue Jun 28 15:37:28 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux",
+      "stderr": "",
+      "timeout": false,
+      "started_at": "2026-06-20T23:45:49.581134+00:00",
+      "finished_at": "2026-06-20T23:45:49.582849+00:00",
+      "duration_ms": 1
+    }
+  ],
+  "errors": []
+}

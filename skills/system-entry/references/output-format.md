@@ -8,6 +8,11 @@
 - 主机：
 - 用户：
 - OpenTenBase：
+- 检测置信度：
+- server_version：
+- psql_version：
+- postgres_binary_version：
+- pg_config_version：
 - 管理工具：
 - 可连接 CN：
 - 拓扑：

@@ -5,10 +5,13 @@
 ## VERIFIED：2026-06-21 在 192.168.244.130 执行 system-entry
 
 - 证据：
+  - `evidence/command-output/2026-06-21-074548-system-entry-130.json`
+  - `evidence/sql-results/2026-06-21-074548-system-entry-130-topology.txt`
+  - `evidence/session-notes/2026-06-21-074548-system-entry-130.md`
+- 早期证据：
   - `evidence/command-output/2026-06-21-072430-system-entry-130-cn.json`
   - `evidence/sql-results/2026-06-21-072430-system-entry-130-topology.txt`
   - `evidence/session-notes/2026-06-21-072430-system-entry-130-cn.md`
-- 早期证据：
   - `evidence/command-output/2026-06-21-071244-system-entry-130.json`
   - `evidence/sql-results/2026-06-21-071244-system-entry-130-topology.txt`
   - `evidence/session-notes/2026-06-21-071244-system-entry-130.md`
@@ -26,6 +29,27 @@
 - 一致性状态：`ambiguous`
 - 警告：配置候选中的 CN 数量与 `pgxc_node` 查询结果不同。
 
+## VERIFIED：2026-06-21 在 192.168.244.132 执行 system-entry
+
+- 证据：
+  - `evidence/command-output/2026-06-21-074549-system-entry-132.json`
+  - `evidence/sql-results/2026-06-21-074549-system-entry-132-topology.txt`
+  - `evidence/session-notes/2026-06-21-074549-system-entry-132.md`
+- OpenTenBase detected：true
+- Detection confidence：`high`
+- OpenTenBase 版本：`PostgreSQL 11.0 @ OpenTenBase_v5.21.8.11 (commit: 760b03096) 2025-10-12 21:07:13`
+- 管理工具结果：`ambiguous`
+- 可连接 CN：1 个
+- `pgxc_node`：2 个 CN，2 个 DN
+- 一致性状态：`ambiguous`
+- 备注：`127.0.0.1:30004` 在 132 上不可连接，但脚本继续尝试配置候选并找到可达 CN。
+
+## VERIFIED：普通 PostgreSQL 误判测试
+
+- 证据：
+  - `evidence/command-output/plain-postgresql-misclassification-test.json`
+- 单元测试确认：只有普通 PostgreSQL 版本信息时，`detected=false`，`confidence=none`。
+
 ## VERIFIED：解释器失败尝试
 
 - 证据：
@@ -36,5 +60,4 @@
 
 ## UNVERIFIED
 
-- 本项目尚未测试 `192.168.244.132`。
 - 没有测试或批准任何写操作。

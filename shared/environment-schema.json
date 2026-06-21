@@ -2,7 +2,20 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "OpenTenBase System Entry Environment Summary",
   "type": "object",
-  "required": ["timestamp", "host", "opentenbase", "management", "processes", "ports", "database", "topology", "consistency", "safety", "errors"],
+  "required": [
+    "timestamp",
+    "host",
+    "opentenbase",
+    "management",
+    "processes",
+    "ports",
+    "database",
+    "topology",
+    "consistency",
+    "safety",
+    "command_evidence",
+    "errors"
+  ],
   "properties": {
     "timestamp": { "type": "string" },
     "host": {
@@ -17,9 +30,16 @@
       "type": "object",
       "properties": {
         "detected": { "type": "boolean" },
-        "version": { "type": "string" },
+        "confidence": { "type": "string" },
+        "detection_evidence": { "type": "array", "items": { "type": "string" } },
         "binary_root": { "type": "string" },
-        "pg_config": { "type": "string" }
+        "psql": { "type": "string" },
+        "postgres": { "type": "string" },
+        "pg_config": { "type": "string" },
+        "server_version": { "type": "string" },
+        "psql_version": { "type": "string" },
+        "postgres_binary_version": { "type": "string" },
+        "pg_config_version": { "type": "string" }
       }
     },
     "management": {
@@ -27,17 +47,24 @@
       "properties": {
         "selected": { "type": "string" },
         "confidence": { "type": "string", "enum": ["high", "medium", "low", "unknown"] },
+        "scores": { "type": "object" },
         "candidates": { "type": "array" },
         "evidence": { "type": "array" }
       }
     },
+    "config_files": { "type": "array" },
+    "config_topology": { "type": "object" },
     "processes": { "type": "array" },
     "ports": { "type": "array" },
     "database": {
       "type": "object",
       "properties": {
         "reachable_cn": { "type": "array" },
-        "version": { "type": "string" }
+        "server_version": { "type": "string" },
+        "current_database": { "type": "string" },
+        "current_user": { "type": "string" },
+        "pgxc_node_query_ok": { "type": "boolean" },
+        "pgxc_node_error": { "type": "string" }
       }
     },
     "topology": {
@@ -59,6 +86,24 @@
       "type": "object",
       "properties": {
         "write_operations_allowed": { "type": "boolean" }
+      }
+    },
+    "command_evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "kind": { "type": "string" },
+          "purpose": { "type": "string" },
+          "argv": { "type": "array", "items": { "type": "string" } },
+          "returncode": { "type": "integer" },
+          "stdout": { "type": "string" },
+          "stderr": { "type": "string" },
+          "timeout": { "type": "boolean" },
+          "started_at": { "type": "string" },
+          "finished_at": { "type": "string" },
+          "duration_ms": { "type": "integer" }
+        }
       }
     },
     "errors": { "type": "array" }

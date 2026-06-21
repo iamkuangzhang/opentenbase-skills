@@ -1,6 +1,6 @@
 # 当前状态
 
-最后更新：2026-06-21 07:24 本地时间
+最后更新：2026-06-21 07:45 本地时间
 
 ## 当前阶段目标
 
@@ -17,6 +17,10 @@
 - `VERIFIED`：证据文件已保存到 `evidence/`。
 - `VERIFIED`：技能通过 `quick_validate.py` 校验。
 - `VERIFIED`：中文化后的最新脚本已在 `192.168.244.130` 重新只读运行，证据为 `evidence/command-output/2026-06-21-072430-system-entry-130-cn.json`。
+- `VERIFIED`：脚本已增强 OpenTenBase 检测置信度、版本字段拆分、统一命令证据记录和显式数据库连接参数。
+- `VERIFIED`：新脚本已在 `192.168.244.130` 只读回归，证据为 `evidence/command-output/2026-06-21-074548-system-entry-130.json`。
+- `VERIFIED`：新脚本已在 `192.168.244.132` 只读回归，证据为 `evidence/command-output/2026-06-21-074549-system-entry-132.json`。
+- `VERIFIED`：已增加普通 PostgreSQL 误判测试，确认只有普通 PostgreSQL 版本信息时不会判定为 OpenTenBase。
 
 ## 已记录但尚未全部验证
 
@@ -32,11 +36,12 @@
 - 远端 `192.168.244.130` 的 `opentenbase` 用户缺少 `python3`，但 `/opt/python3.11/bin/python3.11` 可用。
 - 管理工具选择为 `ambiguous`，因为同时存在 `opentenbase_ctl` 和 `pgxc_ctl` 相关证据。
 - 多个配置候选导致 CN 数量一致性警告。
+- 130 和 132 均存在配置候选与 `pgxc_node` 数量不一致的警告，当前只报告，不自动修复。
 
 ## 测试环境摘要
 
-- `VERIFIED`：`192.168.244.130` / `otb130` / OpenTenBase v5.21.8.11 / 可连接 CN `127.0.0.1:30004` / `pgxc_node` 返回 2 CN 和 2 DN。
-- `UNVERIFIED`：本项目尚未测试 `192.168.244.132`。
+- `VERIFIED`：`192.168.244.130` / `otb130` / OpenTenBase v5.21.8.11 / 可连接 CN / `pgxc_node` 返回 2 CN 和 2 DN。
+- `VERIFIED`：`192.168.244.132` / OpenTenBase v5.21.8.11 / 可连接 CN / `pgxc_node` 返回 2 CN 和 2 DN。
 
 ## 工作区提醒
 
@@ -51,4 +56,4 @@
 
 ## 下一步唯一建议
 
-未来可以在不执行集群生命周期命令的前提下，增强 `opentenbase_ctl` 与 `pgxc_ctl` 的归属识别能力。
+未来可以在不执行集群生命周期命令的前提下，增强活跃配置识别能力，减少旧配置或模板配置造成的 `ambiguous` 警告。

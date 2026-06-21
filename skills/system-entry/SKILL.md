@@ -38,15 +38,17 @@ description: >
 ## 必须回答的问题
 
 - 当前 OS 用户、主机名和 IP 地址。
-- 是否检测到 OpenTenBase。
-- OpenTenBase 版本和二进制目录。
+- 是否检测到 OpenTenBase、检测置信度和检测证据。
+- OpenTenBase 二进制目录。
+- 分开报告 `server_version`、`psql_version`、`postgres_binary_version`、`pg_config_version`。
 - `psql`、`postgres`、`pg_config`、`opentenbase_ctl`、`pgxc_ctl` 的位置。
 - 管理工具结论：selected、candidate、ambiguous 或 unknown，并给出证据。
 - GTM / CN / DN 相关进程。
 - 相关监听端口。
 - 可连接 CN。
 - 能连接时的 `pgxc_node` 拓扑。
-- 配置、进程、端口和数据库拓扑之间是否一致。
+- 配置、进程、监听端口和数据库拓扑之间是否一致；只报告不一致，不自动修复。
+- 所有 shell 命令和 SQL 都要记录用途、命令、退出码、stdout、stderr、耗时和时间戳。
 - 未知项、警告、权限限制，以及是否允许写操作。
 
 ## 事实标签

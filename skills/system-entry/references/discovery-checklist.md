@@ -70,10 +70,25 @@ find /opt -maxdepth 5 \( -name 'opentenbase_config.ini' -o -name 'config.ini' -o
 
 ## 7. 数据库只读检查
 
-只能使用从配置、进程或监听端口中发现的 CN host/port 候选。
+只能使用显式参数或配置文件中发现的 CN host/port 候选。
+
+不要根据端口号是否以 `3` 开头猜测 CN。监听端口只能作为一致性证据，不能单独作为 CN 候选。
 
 ```bash
 PGCONNECT_TIMEOUT=5 psql -h <host> -p <port> -d postgres -U <user> -Atc 'SELECT 1;'
 PGCONNECT_TIMEOUT=5 psql -h <host> -p <port> -d postgres -U <user> -Atc 'SELECT version();'
 PGCONNECT_TIMEOUT=5 psql -h <host> -p <port> -d postgres -U <user> -Atc "SELECT node_name,node_type,node_host,node_port FROM pgxc_node ORDER BY node_name;"
 ```
+
+脚本支持以下数据库连接参数：
+
+```bash
+--db-user <user>
+--database <database>
+--cn-host <host>
+--cn-port <port>
+--connect-timeout <seconds>
+--no-database
+```
+
+`--cn-host` 和 `--cn-port` 必须同时提供。

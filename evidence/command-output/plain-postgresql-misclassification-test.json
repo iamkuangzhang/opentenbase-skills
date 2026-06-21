@@ -1,0 +1,21 @@
+{
+  "case": "plain PostgreSQL versions must not prove OpenTenBase",
+  "input": {
+    "server_version": "PostgreSQL 16.3 on x86_64-pc-linux-gnu",
+    "psql_version": "psql (PostgreSQL) 16.3",
+    "postgres_binary_version": "postgres (PostgreSQL) 16.3",
+    "pg_config_version": "PostgreSQL 16.3",
+    "config_paths": [],
+    "processes": [],
+    "topology": {
+      "gtm": [],
+      "coordinators": [],
+      "datanodes": []
+    }
+  },
+  "expected": {
+    "detected": false,
+    "confidence": "none"
+  },
+  "status": "VERIFIED by tests/test_discover_environment.py"
+}
