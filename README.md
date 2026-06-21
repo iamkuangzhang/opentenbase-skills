@@ -2,15 +2,17 @@
 
 这是一个面向 AI Agent 的 OpenTenBase 技能包项目。
 
-当前第一阶段只完成一个技能：
+当前包含三个正式技能：
 
-- `opentenbase-system-entry`：当 AI Agent 第一次进入一台可能已经安装 OpenTenBase 的服务器时，执行只读环境识别。
+- `opentenbase-system-entry`：第一次进入服务器时，只读识别 OpenTenBase 环境。
+- `opentenbase-architecture`：解释 OpenTenBase 分布式架构、CN/DN/GTM、分布式查询、表分布和事务。
+- `opentenbase-cluster-management`：指导 OpenTenBase 集群状态检查、启停流程和管理工具选择。
 
 本项目以中文作为文档、技能说明、提示词和评测内容的主要语言；目录名、技能名、程序代码、命令参数、状态常量和结构化数据字段使用英文。OpenTenBase 专有名词和工具名称保留原文，必要时在首次出现时提供中文解释。
 
 ## 当前边界
 
-`opentenbase-system-entry` 只负责识别环境，不负责运维操作。
+正式 skills 给其他 AI Agent 使用；`dev/` 保存本项目开发、测试和证据材料。
 
 允许：
 
@@ -32,14 +34,18 @@
 
 ```text
 opentenbase-agent-skills/
-├── skills/system-entry/
-│   ├── SKILL.md
-│   ├── references/
-│   └── scripts/discover_environment.py
+├── skills/
+│   ├── system-entry/
+│   ├── architecture/
+│   └── cluster-management/
+├── dev/
+│   ├── CURRENT_STATE.md
+│   ├── TEST_ENV.md
+│   ├── prompts/
+│   ├── evals/
+│   └── evidence/
 ├── shared/
-├── prompts/
-├── evals/
-└── evidence/
+└── tests/
 ```
 
 ## 快速验证

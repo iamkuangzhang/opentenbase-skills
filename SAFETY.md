@@ -1,6 +1,6 @@
 # 安全边界
 
-当前阶段只允许只读识别。
+默认只允许只读识别。涉及启停、配置修改、数据库写入、节点操作时，必须先停止并请求用户明确确认。
 
 ## 允许的命令示例
 
@@ -11,7 +11,7 @@
 - 有边界读文件：`cat`、`sed`、`awk`、`grep`、`head`、`tail`
 - 只读 SQL：`SELECT 1`、`SELECT version()`、`SELECT current_database()`、`SELECT current_user`、`SELECT ... FROM pgxc_node`
 
-## 当前阶段禁止
+## 未经确认时禁止
 
 - 启动、停止、初始化、清理或切换集群。
 - 增加、删除或修改节点。

@@ -3,7 +3,7 @@
 如果发生上下文丢失或交接：
 
 1. 先停止编辑，停止继续运行命令。
-2. 重新阅读 `PROJECT_BRIEF.md`、`CURRENT_STATE.md`、`SAFETY.md`、`TEST_ENV.md` 和当前技能。
+2. 重新阅读 `PROJECT_BRIEF.md`、`dev/CURRENT_STATE.md`、`SAFETY.md`、`dev/TEST_ENV.md` 和当前技能。
 3. 查看 `git status` 和 `git diff`。
 4. 总结：
    - `VERIFIED` 事实

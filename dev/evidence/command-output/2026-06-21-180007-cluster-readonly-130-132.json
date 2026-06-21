@@ -1,0 +1,182 @@
+[
+  {
+    "host": "192.168.244.130",
+    "timestamp": "2026-06-21-180007",
+    "commands": [
+      {
+        "name": "tool_paths",
+        "command": "su - opentenbase -c 'command -v opentenbase_ctl || true; command -v pgxc_ctl || true; command -v psql || true'",
+        "returncode": 0,
+        "stdout": "/data/opentenbase/install/opentenbase_bin_v2.0/bin/opentenbase_ctl\n/data/opentenbase/install/opentenbase_bin_v2.0/bin/pgxc_ctl\n/data/opentenbase/install/opentenbase_bin_v2.0/bin/psql\n",
+        "stderr": ""
+      },
+      {
+        "name": "find_configs",
+        "command": "su - opentenbase -c 'find /data/opentenbase /opt /home/opentenbase -maxdepth 5 \\( -name opentenbase_config.ini -o -name config.ini -o -name pgxc_ctl.conf \\) -type f 2>/dev/null | sort'",
+        "returncode": 0,
+        "stdout": "/data/opentenbase/OpenTenBase/contrib/opentenbase_ctl.new/config/config.ini\n/data/opentenbase/OpenTenBase/contrib/opentenbase_ctl/config/config.ini\n/data/opentenbase/OpenTenBase/src/test/opentenbase_test/pgxc_ctl.conf\n/data/opentenbase/backup/opentenbase_ctl_20260619_054001/opentenbase_ctl.source/config/config.ini\n/data/opentenbase/install/opentenbase_bin_v2.0/pgxc_ctl.conf\n/data/opentenbase/opentenbase_ctl_current/config.ini\n/data/opentenbase/pgxc_ctl/pgxc_ctl.conf\n",
+        "stderr": ""
+      },
+      {
+        "name": "processes",
+        "command": "su - opentenbase -c 'ps -ef | grep -E '\"'\"'[p]ostgres|[g]tm|[p]gxc|[o]pentenbase'\"'\"''",
+        "returncode": 0,
+        "stdout": "root       1941   1846  0 17:26 pts/0    00:00:00 su - opentenbase\nroot      14192  14138  0 18:00 ?        00:00:00 su - opentenbase -c ps -ef | grep -E '[p]ostgres|[g]tm|[p]gxc|[o]pentenbase'\n",
+        "stderr": ""
+      },
+      {
+        "name": "ports",
+        "command": "su - opentenbase -c 'ss -lntp 2>/dev/null || netstat -lntp 2>/dev/null || true'",
+        "returncode": 0,
+        "stdout": "State      Recv-Q Send-Q Local Address:Port               Peer Address:Port              \nLISTEN     0      128          *:22                       *:*                  \nLISTEN     0      100    127.0.0.1:25                       *:*                  \nLISTEN     0      128       [::]:22                    [::]:*                  \nLISTEN     0      100      [::1]:25                    [::]:*                  \n",
+        "stderr": ""
+      },
+      {
+        "name": "select_1_30004",
+        "command": "su - opentenbase -c '/data/opentenbase/install/opentenbase_bin_v2.0/bin/psql -h 127.0.0.1 -p 30004 -d postgres -U opentenbase -Atc '\"'\"'SELECT 1;'\"'\"''",
+        "returncode": 2,
+        "stdout": "",
+        "stderr": "psql: could not connect to server: Connection refused\n\tIs the server running on host \"127.0.0.1\" and accepting\n\tTCP/IP connections on port 30004?\n"
+      },
+      {
+        "name": "version_30004",
+        "command": "su - opentenbase -c '/data/opentenbase/install/opentenbase_bin_v2.0/bin/psql -h 127.0.0.1 -p 30004 -d postgres -U opentenbase -Atc '\"'\"'SELECT version();'\"'\"''",
+        "returncode": 2,
+        "stdout": "",
+        "stderr": "psql: could not connect to server: Connection refused\n\tIs the server running on host \"127.0.0.1\" and accepting\n\tTCP/IP connections on port 30004?\n"
+      },
+      {
+        "name": "pgxc_node_30004",
+        "command": "su - opentenbase -c '/data/opentenbase/install/opentenbase_bin_v2.0/bin/psql -h 127.0.0.1 -p 30004 -d postgres -U opentenbase -Atc '\"'\"'SELECT node_name,node_type,node_host,node_port FROM pgxc_node ORDER BY node_name;'\"'\"''",
+        "returncode": 2,
+        "stdout": "",
+        "stderr": "psql: could not connect to server: Connection refused\n\tIs the server running on host \"127.0.0.1\" and accepting\n\tTCP/IP connections on port 30004?\n"
+      },
+      {
+        "name": "select_1_30005",
+        "command": "su - opentenbase -c '/data/opentenbase/install/opentenbase_bin_v2.0/bin/psql -h 127.0.0.1 -p 30005 -d postgres -U opentenbase -Atc '\"'\"'SELECT 1;'\"'\"''",
+        "returncode": 2,
+        "stdout": "",
+        "stderr": "psql: could not connect to server: Connection refused\n\tIs the server running on host \"127.0.0.1\" and accepting\n\tTCP/IP connections on port 30005?\n"
+      },
+      {
+        "name": "version_30005",
+        "command": "su - opentenbase -c '/data/opentenbase/install/opentenbase_bin_v2.0/bin/psql -h 127.0.0.1 -p 30005 -d postgres -U opentenbase -Atc '\"'\"'SELECT version();'\"'\"''",
+        "returncode": 2,
+        "stdout": "",
+        "stderr": "psql: could not connect to server: Connection refused\n\tIs the server running on host \"127.0.0.1\" and accepting\n\tTCP/IP connections on port 30005?\n"
+      },
+      {
+        "name": "pgxc_node_30005",
+        "command": "su - opentenbase -c '/data/opentenbase/install/opentenbase_bin_v2.0/bin/psql -h 127.0.0.1 -p 30005 -d postgres -U opentenbase -Atc '\"'\"'SELECT node_name,node_type,node_host,node_port FROM pgxc_node ORDER BY node_name;'\"'\"''",
+        "returncode": 2,
+        "stdout": "",
+        "stderr": "psql: could not connect to server: Connection refused\n\tIs the server running on host \"127.0.0.1\" and accepting\n\tTCP/IP connections on port 30005?\n"
+      },
+      {
+        "name": "pgxc_ctl_monitor_all",
+        "command": "su - opentenbase -c \"printf 'monitor all\\nquit\\n' | /data/opentenbase/install/opentenbase_bin_v2.0/bin/pgxc_ctl --home /data/opentenbase/install/opentenbase_bin_v2.0 -c /data/opentenbase/install/opentenbase_bin_v2.0/pgxc_ctl.conf\"",
+        "returncode": 0,
+        "stdout": "/bin/bash\n   ******** PGXC_CTL START ***************\n\nCurrent directory: /data/opentenbase/install/opentenbase_bin_v2.0\nPGXC Not running: gtm master\nNot running: coordinator master cn001\nNot running: coordinator master cn002\nNot running: coordinator master cn003\nNot running: datanode master dn001\nNot running: datanode master dn002\nNot running: datanode master dn003\nPGXC ",
+        "stderr": "Installing pgxc_ctl_bash script as /data/opentenbase/install/opentenbase_bin_v2.0/pgxc_ctl_bash.\nInstalling pgxc_ctl_bash script as /data/opentenbase/install/opentenbase_bin_v2.0/pgxc_ctl_bash.\nReading configuration using /data/opentenbase/install/opentenbase_bin_v2.0/pgxc_ctl_bash --home /data/opentenbase/install/opentenbase_bin_v2.0 --configuration /data/opentenbase/install/opentenbase_bin_v2.0/pgxc_ctl.conf\nFinished reading configuration.\n"
+      },
+      {
+        "name": "opentenbase_ctl_status_help",
+        "command": "su - opentenbase -c '/data/opentenbase/install/opentenbase_bin_v2.0/bin/opentenbase_ctl status --help'",
+        "returncode": 1,
+        "stdout": "Show instance status\nUsage: opentenbase_ctl status [OPTIONS]\n\nOptions:\n  -h,--help                   Print this help message and exit\n  -c,--config TEXT            Path to configuration file\n  -n,--node TEXT              Node to  show status. A certain type of node, Or a certain node. The available options are: cn-master, cn-slave, dn-master, dn-slave, cn0001, ip:port\n",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "host": "192.168.244.132",
+    "timestamp": "2026-06-21-180007",
+    "commands": [
+      {
+        "name": "tool_paths",
+        "command": "su - opentenbase -c 'command -v opentenbase_ctl || true; command -v pgxc_ctl || true; command -v psql || true'",
+        "returncode": 0,
+        "stdout": "/data/opentenbase/install/opentenbase_bin_v2.0/bin/opentenbase_ctl\n/data/opentenbase/install/opentenbase_bin_v2.0/bin/pgxc_ctl\n/data/opentenbase/install/opentenbase_bin_v2.0/bin/psql\n",
+        "stderr": ""
+      },
+      {
+        "name": "find_configs",
+        "command": "su - opentenbase -c 'find /data/opentenbase /opt /home/opentenbase -maxdepth 5 \\( -name opentenbase_config.ini -o -name config.ini -o -name pgxc_ctl.conf \\) -type f 2>/dev/null | sort'",
+        "returncode": 0,
+        "stdout": "/data/opentenbase/OpenTenBase/contrib/opentenbase_ctl/config/config.ini\n/data/opentenbase/OpenTenBase/src/test/opentenbase_test/pgxc_ctl.conf\n/data/opentenbase/install/opentenbase_bin_v2.0/pgxc_ctl.conf\n/data/opentenbase/opentenbase_ctl_current/config.ini\n/data/opentenbase/pgxc_ctl/pgxc_ctl.conf\n",
+        "stderr": ""
+      },
+      {
+        "name": "processes",
+        "command": "su - opentenbase -c 'ps -ef | grep -E '\"'\"'[p]ostgres|[g]tm|[p]gxc|[o]pentenbase'\"'\"''",
+        "returncode": 0,
+        "stdout": "root       1749   1695  0 17:26 pts/0    00:00:00 su - opentenbase\nroot       1878   1830  0 18:00 ?        00:00:00 su - opentenbase -c ps -ef | grep -E '[p]ostgres|[g]tm|[p]gxc|[o]pentenbase'\n",
+        "stderr": ""
+      },
+      {
+        "name": "ports",
+        "command": "su - opentenbase -c 'ss -lntp 2>/dev/null || netstat -lntp 2>/dev/null || true'",
+        "returncode": 0,
+        "stdout": "State      Recv-Q Send-Q Local Address:Port               Peer Address:Port              \nLISTEN     0      128          *:22                       *:*                  \nLISTEN     0      100    127.0.0.1:25                       *:*                  \nLISTEN     0      128       [::]:22                    [::]:*                  \nLISTEN     0      100      [::1]:25                    [::]:*                  \n",
+        "stderr": ""
+      },
+      {
+        "name": "select_1_30004",
+        "command": "su - opentenbase -c '/data/opentenbase/install/opentenbase_bin_v2.0/bin/psql -h 127.0.0.1 -p 30004 -d postgres -U opentenbase -Atc '\"'\"'SELECT 1;'\"'\"''",
+        "returncode": 2,
+        "stdout": "",
+        "stderr": "psql: could not connect to server: Connection refused\n\tIs the server running on host \"127.0.0.1\" and accepting\n\tTCP/IP connections on port 30004?\n"
+      },
+      {
+        "name": "version_30004",
+        "command": "su - opentenbase -c '/data/opentenbase/install/opentenbase_bin_v2.0/bin/psql -h 127.0.0.1 -p 30004 -d postgres -U opentenbase -Atc '\"'\"'SELECT version();'\"'\"''",
+        "returncode": 2,
+        "stdout": "",
+        "stderr": "psql: could not connect to server: Connection refused\n\tIs the server running on host \"127.0.0.1\" and accepting\n\tTCP/IP connections on port 30004?\n"
+      },
+      {
+        "name": "pgxc_node_30004",
+        "command": "su - opentenbase -c '/data/opentenbase/install/opentenbase_bin_v2.0/bin/psql -h 127.0.0.1 -p 30004 -d postgres -U opentenbase -Atc '\"'\"'SELECT node_name,node_type,node_host,node_port FROM pgxc_node ORDER BY node_name;'\"'\"''",
+        "returncode": 2,
+        "stdout": "",
+        "stderr": "psql: could not connect to server: Connection refused\n\tIs the server running on host \"127.0.0.1\" and accepting\n\tTCP/IP connections on port 30004?\n"
+      },
+      {
+        "name": "select_1_30005",
+        "command": "su - opentenbase -c '/data/opentenbase/install/opentenbase_bin_v2.0/bin/psql -h 127.0.0.1 -p 30005 -d postgres -U opentenbase -Atc '\"'\"'SELECT 1;'\"'\"''",
+        "returncode": 2,
+        "stdout": "",
+        "stderr": "psql: could not connect to server: Connection refused\n\tIs the server running on host \"127.0.0.1\" and accepting\n\tTCP/IP connections on port 30005?\n"
+      },
+      {
+        "name": "version_30005",
+        "command": "su - opentenbase -c '/data/opentenbase/install/opentenbase_bin_v2.0/bin/psql -h 127.0.0.1 -p 30005 -d postgres -U opentenbase -Atc '\"'\"'SELECT version();'\"'\"''",
+        "returncode": 2,
+        "stdout": "",
+        "stderr": "psql: could not connect to server: Connection refused\n\tIs the server running on host \"127.0.0.1\" and accepting\n\tTCP/IP connections on port 30005?\n"
+      },
+      {
+        "name": "pgxc_node_30005",
+        "command": "su - opentenbase -c '/data/opentenbase/install/opentenbase_bin_v2.0/bin/psql -h 127.0.0.1 -p 30005 -d postgres -U opentenbase -Atc '\"'\"'SELECT node_name,node_type,node_host,node_port FROM pgxc_node ORDER BY node_name;'\"'\"''",
+        "returncode": 2,
+        "stdout": "",
+        "stderr": "psql: could not connect to server: Connection refused\n\tIs the server running on host \"127.0.0.1\" and accepting\n\tTCP/IP connections on port 30005?\n"
+      },
+      {
+        "name": "pgxc_ctl_monitor_all",
+        "command": "su - opentenbase -c \"printf 'monitor all\\nquit\\n' | /data/opentenbase/install/opentenbase_bin_v2.0/bin/pgxc_ctl --home /data/opentenbase/install/opentenbase_bin_v2.0 -c /data/opentenbase/install/opentenbase_bin_v2.0/pgxc_ctl.conf\"",
+        "returncode": 0,
+        "stdout": "/bin/bash\n   ******** PGXC_CTL START ***************\n\nCurrent directory: /data/opentenbase/install/opentenbase_bin_v2.0\nPGXC Not running: gtm master\nNot running: coordinator master cn001\nNot running: coordinator master cn002\nNot running: coordinator master cn003\nNot running: datanode master dn001\nNot running: datanode master dn002\nNot running: datanode master dn003\nPGXC ",
+        "stderr": "Installing pgxc_ctl_bash script as /data/opentenbase/install/opentenbase_bin_v2.0/pgxc_ctl_bash.\nInstalling pgxc_ctl_bash script as /data/opentenbase/install/opentenbase_bin_v2.0/pgxc_ctl_bash.\nReading configuration using /data/opentenbase/install/opentenbase_bin_v2.0/pgxc_ctl_bash --home /data/opentenbase/install/opentenbase_bin_v2.0 --configuration /data/opentenbase/install/opentenbase_bin_v2.0/pgxc_ctl.conf\nFinished reading configuration.\n"
+      },
+      {
+        "name": "opentenbase_ctl_status_help",
+        "command": "su - opentenbase -c '/data/opentenbase/install/opentenbase_bin_v2.0/bin/opentenbase_ctl status --help'",
+        "returncode": 127,
+        "stdout": "",
+        "stderr": "/data/opentenbase/install/opentenbase_bin_v2.0/bin/opentenbase_ctl: error while loading shared libraries: libpqxx.so: cannot open shared object file: No such file or directory\n"
+      }
+    ]
+  }
+]

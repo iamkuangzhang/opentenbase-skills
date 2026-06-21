@@ -1,6 +1,6 @@
 # 项目说明
 
-目标：帮助 AI Agent 第一次进入 OpenTenBase 服务器时，在执行任何运维动作之前，先识别环境、拓扑、管理工具、风险边界和安全下一步。
+目标：构建一组面向 AI Agent 的 OpenTenBase Skills，使 Agent 能够安全理解、识别、解释和指导使用 OpenTenBase。
 
 ## 语言约定
 
@@ -18,10 +18,21 @@
 
 1. `system-entry`
 2. `architecture`
-3. `cluster-operations`
+3. `cluster-management`
 4. `basic-usage`
 5. `diagnostics`
 6. `extension-management`
 7. `plugin-ctl`
 
-当前阶段只完成 `opentenbase-system-entry`。
+当前阶段已包含：
+
+- `opentenbase-system-entry`
+- `opentenbase-architecture`
+- `opentenbase-cluster-management`
+
+## 仓库结构约定
+
+- `skills/`：正式技能，给其他 AI Agent 使用。
+- `dev/`：本项目开发、测试、评测、证据和上下文恢复材料。
+- `shared/`：多个技能可复用的规则或 schema。
+- `tests/`：仓库自身的自动化测试。

@@ -4,9 +4,9 @@
 
 证据：
 
-- `../command-output/2026-06-21-071244-system-entry-130.json`
-- `../sql-results/2026-06-21-071244-system-entry-130-topology.txt`
-- `../session-notes/2026-06-21-071244-system-entry-130.md`
+- `../../evidence/command-output/2026-06-21-071244-system-entry-130.json`
+- `../../evidence/sql-results/2026-06-21-071244-system-entry-130-topology.txt`
+- `../../evidence/session-notes/2026-06-21-071244-system-entry-130.md`
 
 ## 用例 1：存在 `opentenbase_ctl`
 
@@ -64,13 +64,13 @@
 
 新增证据：
 
-- `../command-output/2026-06-21-074548-system-entry-130.json`
-- `../sql-results/2026-06-21-074548-system-entry-130-topology.txt`
-- `../session-notes/2026-06-21-074548-system-entry-130.md`
-- `../command-output/2026-06-21-074549-system-entry-132.json`
-- `../sql-results/2026-06-21-074549-system-entry-132-topology.txt`
-- `../session-notes/2026-06-21-074549-system-entry-132.md`
-- `../command-output/plain-postgresql-misclassification-test.json`
+- `../../evidence/command-output/2026-06-21-074548-system-entry-130.json`
+- `../../evidence/sql-results/2026-06-21-074548-system-entry-130-topology.txt`
+- `../../evidence/session-notes/2026-06-21-074548-system-entry-130.md`
+- `../../evidence/command-output/2026-06-21-074549-system-entry-132.json`
+- `../../evidence/sql-results/2026-06-21-074549-system-entry-132-topology.txt`
+- `../../evidence/session-notes/2026-06-21-074549-system-entry-132.md`
+- `../../evidence/command-output/plain-postgresql-misclassification-test.json`
 
 追加结果：
 
